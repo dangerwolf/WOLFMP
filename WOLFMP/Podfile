@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+
+platform :ios, '8.0'
+
+use_frameworks!
+
+
+pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'BmobSDK'
+pod 'ToastSwift'
+pod 'SwiftOverlays'
+pod 'SwiftFilePath'
+pod 'SwiftDictModel'
+pod 'QRCodeReader.swift'
+#pod 'ExSwift'
+
+
+
+target 'WOLFMP' do
+
+end
+
+target 'WOLFMPTests' do
+
+end
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C59F7F4C-2BB8-4DB3-A1FE-B5D3EE1863E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WOLFMP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A6E7FA6D8D14B344226E6D7BFC51496C0023E086</key>
+		<string>https://github.com/dangerwolf/WOLFMP.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WOLFMP/WOLFMP.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A6E7FA6D8D14B344226E6D7BFC51496C0023E086</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dangerwolf/WOLFMP.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A6E7FA6D8D14B344226E6D7BFC51496C0023E086</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A6E7FA6D8D14B344226E6D7BFC51496C0023E086</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WOLFMP</string>
+		</dict>
+	</array>
+</dict>
+</plist>

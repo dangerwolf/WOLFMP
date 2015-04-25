@@ -1,0 +1,6 @@
+framework module Pods_WOLFMPTests {
+  umbrella header "Pods-WOLFMPTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

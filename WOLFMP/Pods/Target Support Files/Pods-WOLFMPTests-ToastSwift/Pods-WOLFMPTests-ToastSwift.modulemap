@@ -1,6 +1,0 @@
-framework module ToastSwift {
-  umbrella header "Pods-WOLFMPTests-ToastSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

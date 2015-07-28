@@ -1,6 +1,0 @@
-framework module SwiftOverlays {
-  umbrella header "Pods-WOLFMP-SwiftOverlays-umbrella.h"
-
-  export *
-  module * { export * }
-}

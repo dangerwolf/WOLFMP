@@ -1,6 +1,0 @@
-framework module QRCodeReader {
-  umbrella header "Pods-QRCodeReader.swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

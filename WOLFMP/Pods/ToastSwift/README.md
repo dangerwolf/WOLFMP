@@ -3,6 +3,16 @@ Toast-Swift
 
 Toast view using swift.
 
+### Install
+
+CocoaPods:
+
+```
+pod 'ToastSwift'
+```
+
+Or download this repo.
+
 
 ### Usage
 

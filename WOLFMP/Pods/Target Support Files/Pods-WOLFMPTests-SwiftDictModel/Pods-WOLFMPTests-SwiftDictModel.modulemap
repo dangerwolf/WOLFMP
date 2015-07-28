@@ -1,6 +1,0 @@
-framework module SwiftDictModel {
-  umbrella header "Pods-WOLFMPTests-SwiftDictModel-umbrella.h"
-
-  export *
-  module * { export * }
-}

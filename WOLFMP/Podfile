@@ -16,6 +16,14 @@ pod 'QRCodeReader.swift'
 #pod 'ExSwift'
 
 
+pod 'PDTSimpleCalendar'
+pod 'ChameleonFramework/Swift'
+pod 'TextFieldEffects'
+pod 'MGSwipeTableCell'
+pod 'Spring'
+pod 'ios-charts'
+
+
 
 target 'WOLFMP' do
 

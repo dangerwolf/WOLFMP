@@ -1,6 +1,0 @@
-framework module SwiftFilePath {
-  umbrella header "Pods-WOLFMPTests-SwiftFilePath-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -4,112 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Alamofire.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-QRCodeReader.swift.xcscheme</key>
+		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SwiftDictModel.xcscheme</key>
+		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SwiftFilePath.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SwiftOverlays.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ToastSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-QRCodeReader.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-SwiftDictModel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-SwiftFilePath.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-SwiftOverlays.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMP-ToastSwift.xcscheme</key>
+		<key>PDTSimpleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-WOLFMP.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-QRCodeReader.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-SwiftDictModel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-SwiftFilePath.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-SwiftOverlays.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WOLFMPTests-ToastSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -124,125 +39,140 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>QRCodeReader.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftDictModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftFilePath.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftOverlays.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ToastSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ios-charts-Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ios-charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14BAA563067DF05B19C49982</key>
+		<key>202F570D4490CF4F45CA72F38D0BB621</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>177B5894D349C2A1DBEE2661</key>
+		<key>20EBDF035A049064748ABB7D388F33FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FEB4B927BC9DC6412622B82</key>
+		<key>257CFAA5166AF03244CD173AA0EE7982</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>205A63F64A99CDEB4728E5AF</key>
+		<key>4807720F2CF786333249CA609FF79B2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2138C80DD0E8688F160F8BF9</key>
+		<key>4ADDC830F1F3957A877DC0A28F0CBD4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>279050B287348DFC36900E74</key>
+		<key>66F6B4FA83BAE2280CA0199714C4324D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48A7D7013C6C445BB95DD66B</key>
+		<key>75CAD5F6330905F56542D13279F8EE0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52834AB439B008DCF352AA46</key>
+		<key>78FF3A0A2D8589705EC47BF824BEA460</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61BC1E1D8BFA77B8CFBFA38D</key>
+		<key>8EFF47FAFF5A87901DA9B0D2CB39E87A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84472B29A5948F56EDC62368</key>
+		<key>92ED78A4D4C2365C6FD47B3169A04650</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A486619F6B78813C663101C</key>
+		<key>A57AFD66D43E2014B3214415E9DE50D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DF73F4893F7060511F04BA2</key>
+		<key>A6C1CBF3630B8951262CE6B097678994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9307B09B3746F23920D5EA32</key>
+		<key>AA3C3EF7C7D5E9FFCD4D786F56DA1902</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>939FCB9D258C8C0EA5C08830</key>
+		<key>B0FAF9D970BE7FEEF604B3C79D236207</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F29C085DDBBCBCEA0B8D9B3</key>
+		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B416D8ED7A0F8A9269FCD50F</key>
+		<key>DA2F1E251BB1D94D3A57A3F6915D44ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B722C03B9A65EA31A039C8F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA12497A05E0E3F6862EBB5A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BBAC0C5F097EE3260BF7C604</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6C62984D6D7C45D0C1AA7F9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6FC51123EAF805CEC42D713</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F205FD9592B1944F23C60B90</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F23639D54BBDC5205D8F1779</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5BDAF8B4362D1AD73EDF712</key>
+		<key>F7ED902DA9B8C7F94554D537AB6765C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,1 +1,0 @@
-PODS_TOASTSWIFT_OTHER_LDFLAGS = -framework "UIKit"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B263261B67D57800E0A6D1 /* LoginViewController.swift */; };
+		79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79E97FFC1B67D3BC0068B0FC /* temp.mm */; };
 		79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F521AEBF37C00D53C72 /* AppDelegate.swift */; };
 		79F33F561AEBF37C00D53C72 /* WOLFMP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F541AEBF37C00D53C72 /* WOLFMP.xcdatamodeld */; };
 		79F33F581AEBF37C00D53C72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F571AEBF37C00D53C72 /* ViewController.swift */; };
@@ -29,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		79B263261B67D57800E0A6D1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = VC/Login/LoginViewController.swift; sourceTree = "<group>"; };
+		79E97FFB1B67D3BC0068B0FC /* WOLFMP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WOLFMP-Bridging-Header.h"; sourceTree = "<group>"; };
+		79E97FFC1B67D3BC0068B0FC /* temp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = temp.mm; path = OC/temp.mm; sourceTree = "<group>"; };
 		79F33F4D1AEBF37C00D53C72 /* WOLFMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WOLFMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F33F511AEBF37C00D53C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F33F521AEBF37C00D53C72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B263241B67D53F00E0A6D1 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				79B263251B67D54900E0A6D1 /* Login */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		79B263251B67D54900E0A6D1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				79B263261B67D57800E0A6D1 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		79F33F441AEBF37C00D53C72 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,8 @@
 		79F33F4F1AEBF37C00D53C72 /* WOLFMP */ = {
 			isa = PBXGroup;
 			children = (
+				79B263241B67D53F00E0A6D1 /* VC */,
+				79F9BA931B67CD17009080D2 /* OC */,
 				79F33F521AEBF37C00D53C72 /* AppDelegate.swift */,
 				79F33F571AEBF37C00D53C72 /* ViewController.swift */,
 				79F33F591AEBF37C00D53C72 /* Main.storyboard */,
@@ -120,6 +143,15 @@
 				79F33F6A1AEBF37D00D53C72 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79F9BA931B67CD17009080D2 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				79E97FFC1B67D3BC0068B0FC /* temp.mm */,
+				79E97FFB1B67D3BC0068B0FC /* WOLFMP-Bridging-Header.h */,
+			);
+			name = OC;
 			sourceTree = "<group>";
 		};
 		818401BAA0AEF9BC6B494C20 /* Frameworks */ = {
@@ -186,6 +218,7 @@
 		79F33F451AEBF37C00D53C72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = wolf;
 				TargetAttributes = {
@@ -293,6 +326,8 @@
 				79F33F581AEBF37C00D53C72 /* ViewController.swift in Sources */,
 				79F33F561AEBF37C00D53C72 /* WOLFMP.xcdatamodeld in Sources */,
 				79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */,
+				79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */,
+				79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +457,13 @@
 			baseConfigurationReference = DAD5B8412F4BFF868ED7106B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WOLFMP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WOLFMP/WOLFMP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -434,10 +472,12 @@
 			baseConfigurationReference = 3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WOLFMP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WOLFMP/WOLFMP-Bridging-Header.h";
 			};
 			name = Release;
 		};

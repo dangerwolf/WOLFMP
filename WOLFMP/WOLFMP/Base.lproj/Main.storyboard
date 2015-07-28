@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WOLFMP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WOLFMP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,19 +16,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-pC-cPV">
-                                <rect key="frame" x="259" y="132" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2Z3-Nu-PZb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-pC-cPV" customClass="YokoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="200" y="120" width="200" height="55"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dCq-5n-6VR"/>
+                                    <constraint firstAttribute="height" constant="55" id="hZk-nH-RWN"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bcw-FL-1Te" customClass="YokoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="200" y="205" width="200" height="55"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="57l-zj-uiU"/>
+                                    <constraint firstAttribute="height" constant="55" id="aAJ-72-Rtg"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
+                                        <color key="value" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHg-fI-M3W">
+                                <rect key="frame" x="277" y="290" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="S58-Li-6Jo"/>
+                                    <constraint firstAttribute="height" constant="30" id="qqe-ZZ-qXU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-ed-Ljn">
+                                <rect key="frame" x="277" y="330" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="QN0-9B-qMm"/>
+                                    <constraint firstAttribute="height" constant="30" id="k2C-eF-Z93"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当前版本：0.0.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LP-PO-DaK">
+                                <rect key="frame" x="234" y="571" width="133" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GS9-ed-Ljn" firstAttribute="top" secondItem="iHg-fI-M3W" secondAttribute="bottom" constant="10" id="2Ny-GB-9ig"/>
+                            <constraint firstAttribute="centerX" secondItem="bcw-FL-1Te" secondAttribute="centerX" id="2gh-fC-VC6"/>
+                            <constraint firstAttribute="trailing" secondItem="2Z3-Nu-PZb" secondAttribute="trailing" id="4Op-FK-g2I"/>
+                            <constraint firstAttribute="centerX" secondItem="iHg-fI-M3W" secondAttribute="centerX" id="AYQ-EO-jZ9"/>
+                            <constraint firstAttribute="centerX" secondItem="GS9-ed-Ljn" secondAttribute="centerX" id="De7-SK-1h5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5LP-PO-DaK" secondAttribute="bottom" constant="10" id="K8C-19-qXy"/>
+                            <constraint firstAttribute="centerX" secondItem="5LP-PO-DaK" secondAttribute="centerX" id="U4S-io-BFg"/>
+                            <constraint firstItem="2Z3-Nu-PZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dXG-EU-7Hk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Z3-Nu-PZb" secondAttribute="bottom" id="fBd-MJ-Bck"/>
+                            <constraint firstItem="bcw-FL-1Te" firstAttribute="top" secondItem="QfX-pC-cPV" secondAttribute="bottom" constant="30" id="o8o-gu-1Zr"/>
+                            <constraint firstItem="QfX-pC-cPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ppG-U4-9Tg"/>
+                            <constraint firstItem="iHg-fI-M3W" firstAttribute="top" secondItem="bcw-FL-1Te" secondAttribute="bottom" constant="30" id="qis-1o-E4R"/>
+                            <constraint firstAttribute="centerX" secondItem="QfX-pC-cPV" secondAttribute="centerX" id="rNb-26-9Wa"/>
+                            <constraint firstItem="2Z3-Nu-PZb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="www-cG-OZz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="360" height="640"/>
+    </resources>
 </document>

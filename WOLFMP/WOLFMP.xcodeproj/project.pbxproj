@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770573591B68AE0B005F3252 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770573581B68AE0B005F3252 /* HRToast+UIView.swift */; };
+		7705735B1B68B3AF005F3252 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705735A1B68B3AF005F3252 /* SignInViewController.swift */; };
 		79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B263261B67D57800E0A6D1 /* LoginViewController.swift */; };
 		79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79E97FFC1B67D3BC0068B0FC /* temp.mm */; };
 		79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F521AEBF37C00D53C72 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		770573581B68AE0B005F3252 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HRToast+UIView.swift"; path = "Lib/Toast/HRToast+UIView.swift"; sourceTree = "<group>"; };
+		7705735A1B68B3AF005F3252 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = VC/Login/SignInViewController.swift; sourceTree = "<group>"; };
 		79B263261B67D57800E0A6D1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = VC/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		79E97FFB1B67D3BC0068B0FC /* WOLFMP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WOLFMP-Bridging-Header.h"; sourceTree = "<group>"; };
 		79E97FFC1B67D3BC0068B0FC /* temp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = temp.mm; path = OC/temp.mm; sourceTree = "<group>"; };
@@ -68,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770573561B68ADBD005F3252 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				770573571B68ADC6005F3252 /* Toast */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		770573571B68ADC6005F3252 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				770573581B68AE0B005F3252 /* HRToast+UIView.swift */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
 		79B263241B67D53F00E0A6D1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				79B263261B67D57800E0A6D1 /* LoginViewController.swift */,
+				7705735A1B68B3AF005F3252 /* SignInViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -107,6 +128,7 @@
 		79F33F4F1AEBF37C00D53C72 /* WOLFMP */ = {
 			isa = PBXGroup;
 			children = (
+				770573561B68ADBD005F3252 /* Lib */,
 				79B263241B67D53F00E0A6D1 /* VC */,
 				79F9BA931B67CD17009080D2 /* OC */,
 				79F33F521AEBF37C00D53C72 /* AppDelegate.swift */,
@@ -323,8 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7705735B1B68B3AF005F3252 /* SignInViewController.swift in Sources */,
 				79F33F581AEBF37C00D53C72 /* ViewController.swift in Sources */,
 				79F33F561AEBF37C00D53C72 /* WOLFMP.xcdatamodeld in Sources */,
+				770573591B68AE0B005F3252 /* HRToast+UIView.swift in Sources */,
 				79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */,
 				79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */,
 				79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */,

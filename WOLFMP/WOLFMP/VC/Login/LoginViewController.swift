@@ -8,14 +8,23 @@
 
 import UIKit
 import TextFieldEffects
+import ToastSwift
+import Spring
 
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var userCodeTF: YokoTextField!
+    @IBOutlet weak var pwdTF: YokoTextField!
+    @IBOutlet weak var versionLabel: SpringLabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        versionLabel.text = "当前版本：".stringByAppendingString((NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String)!)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +33,39 @@ class LoginViewController: UIViewController {
     }
     
 
+    //MARK: 收键盘
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if !(userCodeTF.exclusiveTouch) {
+            userCodeTF.resignFirstResponder()
+        }
+        
+        if !pwdTF.exclusiveTouch {
+            pwdTF.resignFirstResponder()
+        }
+    }
+
+
+    @IBAction func loginAction(sender: AnyObject) {
+        
+        userCodeTF.resignFirstResponder()
+        pwdTF.resignFirstResponder()
+        
+        
+        BmobUser.loginInbackgroundWithAccount(userCodeTF.text, andPassword: pwdTF.text) { (user, error) -> Void in
+            if user != nil {
+                self.performSegueWithIdentifier("login2tabbarSegue", sender: self)
+            }else{
+                let errrorInfo: AnyObject? = error.userInfo!.values.first
+                self.view.makeToast(message: "\(errrorInfo!)")
+            }
+        
+        }
+    }
+    
+
+    
+    
+    
     /*
     // MARK: - Navigation
 

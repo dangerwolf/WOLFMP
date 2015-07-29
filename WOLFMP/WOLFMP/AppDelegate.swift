@@ -13,7 +13,9 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+    var rootVC = UIViewController()
+    let bUser = BmobUser.getCurrentUser()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,6 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         Bmob.registerWithAppKey("49c3c4bdae4fd2786feed6d6286f6a00")
+        
+        //        每次你登录成功，都会在本地磁盘中有一个缓存的用户对象作为当前用户，可以获取这个缓存的用户对象来进行登录
+
+        if (bUser != nil)  {
+            //            //进行操作
+            rootVC = storyboard.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UIViewController
+            
+        }else{
+            //对象为空时，可打开用户注册界面
+            rootVC = storyboard.instantiateViewControllerWithIdentifier("LoginVC") as! UIViewController
+            
+        }
+        self.window?.rootViewController = rootVC
+        
+        
+        
         
         return true
     }

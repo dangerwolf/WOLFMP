@@ -22,7 +22,7 @@ pod 'TextFieldEffects'
 pod 'MGSwipeTableCell'
 pod 'Spring'
 pod 'ios-charts'
-
+pod 'RongCloudKit'
 
 
 target 'WOLFMP' do

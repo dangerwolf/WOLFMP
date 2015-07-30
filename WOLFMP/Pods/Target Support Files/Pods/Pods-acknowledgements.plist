@@ -1008,6 +1008,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2014 Rong Cloud</string>
+			<key>Title</key>
+			<string>RongCloudKit</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (c) 2014-2015 Meng To (meng@designcode.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

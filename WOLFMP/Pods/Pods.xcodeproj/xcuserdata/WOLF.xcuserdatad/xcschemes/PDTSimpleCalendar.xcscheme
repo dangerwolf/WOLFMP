@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA6C0E14136D36A98E3372C3"
+               BlueprintIdentifier = "C0D2C80DA1002D5A95D20C74"
                BuildableName = "PDTSimpleCalendar.framework"
                BlueprintName = "PDTSimpleCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">

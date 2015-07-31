@@ -1010,7 +1010,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<key>FooterText</key>
 			<string>Copyright 2014 Rong Cloud</string>
 			<key>Title</key>
-			<string>RongCloudKit</string>
+			<string>RongCloudIMKit</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

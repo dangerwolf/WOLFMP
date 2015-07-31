@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
         
         BmobUser.loginInbackgroundWithAccount(userCodeTF.text, andPassword: pwdTF.text) { (user, error) -> Void in
             if user != nil {
-                self.performSegueWithIdentifier("login2tabbarSegue", sender: self)
+                self.performSegueWithIdentifier("login2tMenuSegue", sender: self)
             }else{
                 let errrorInfo: AnyObject? = error.userInfo!.values.first
                 self.view.makeToast(message: "\(errrorInfo!)")

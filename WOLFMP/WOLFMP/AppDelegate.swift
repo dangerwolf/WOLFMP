@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        //MARK :通过BMOB进行用户登录判断
         
         
         Bmob.registerWithAppKey("49c3c4bdae4fd2786feed6d6286f6a00")
@@ -29,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if (bUser != nil)  {
             //            //进行操作
-            rootVC = storyboard.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UIViewController
+            rootVC = storyboard.instantiateViewControllerWithIdentifier("MenuVC") as! UIViewController
             
         }else{
             //对象为空时，可打开用户注册界面
@@ -39,6 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = rootVC
         
         
+        
+        
+        let deviceToken = NSUserDefaults.standardUserDefaults().objectForKey("kDeviceToken") as? String
+        RCIM.sharedRCIM().initWithAppKey("pwe86ga5el156")
+        RCIM.sharedRCIM().connectWithToken("oCFjtvES78B1y5+cjPfAbCnnPjd2QStGE2mvZH+ncIOGoL5Y1Nu4Zge5uMTKS79p9SaalGiru/dZgi+EzL497w==", success: { (successStr) -> Void in
+            println("融云连接成功")
+            println(successStr)
+        }, error: { (errorCode) -> Void in
+            println("融云连接不成功，\(errorCode)")
+        }) { (_) -> Void in
+            println("融云token不正确")
+        }
+        
+        
+    
         
         
         return true

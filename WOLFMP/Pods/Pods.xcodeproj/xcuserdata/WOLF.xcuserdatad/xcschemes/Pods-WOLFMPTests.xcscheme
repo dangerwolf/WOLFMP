@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0B8F980B54DB84E5E2181B5"
+               BlueprintIdentifier = "F49A2D0D0FA82A38AD81302E"
                BuildableName = "Pods_WOLFMPTests.framework"
                BlueprintName = "Pods-WOLFMPTests"
                ReferencedContainer = "container:Pods.xcodeproj">

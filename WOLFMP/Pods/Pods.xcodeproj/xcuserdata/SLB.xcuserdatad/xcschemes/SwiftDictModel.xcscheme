@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D11DC58F17BBEBE47F018ADA"
+               BlueprintIdentifier = "B49183B5E7897624A83FD285"
                BuildableName = "SwiftDictModel.framework"
                BlueprintName = "SwiftDictModel"
                ReferencedContainer = "container:Pods.xcodeproj">

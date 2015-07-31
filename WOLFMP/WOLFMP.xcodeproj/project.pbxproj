@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		770573591B68AE0B005F3252 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770573581B68AE0B005F3252 /* HRToast+UIView.swift */; };
 		7705735B1B68B3AF005F3252 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705735A1B68B3AF005F3252 /* SignInViewController.swift */; };
+		77C4629D1B6A16E400117364 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4629C1B6A16E400117364 /* ConversationListViewController.swift */; };
+		77C462A11B6A20FC00117364 /* XDKAirMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C462A01B6A20FC00117364 /* XDKAirMenuController.m */; };
+		77C462A31B6A22F000117364 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C462A21B6A22F000117364 /* MenuViewController.swift */; };
 		79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B263261B67D57800E0A6D1 /* LoginViewController.swift */; };
 		79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79E97FFC1B67D3BC0068B0FC /* temp.mm */; };
 		79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F521AEBF37C00D53C72 /* AppDelegate.swift */; };
@@ -35,6 +38,10 @@
 		3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		770573581B68AE0B005F3252 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HRToast+UIView.swift"; path = "Lib/Toast/HRToast+UIView.swift"; sourceTree = "<group>"; };
 		7705735A1B68B3AF005F3252 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = VC/Login/SignInViewController.swift; sourceTree = "<group>"; };
+		77C4629C1B6A16E400117364 /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationListViewController.swift; path = VC/Chat/ConversationListViewController.swift; sourceTree = "<group>"; };
+		77C4629F1B6A20FC00117364 /* XDKAirMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDKAirMenuController.h; sourceTree = "<group>"; };
+		77C462A01B6A20FC00117364 /* XDKAirMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDKAirMenuController.m; sourceTree = "<group>"; };
+		77C462A21B6A22F000117364 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		79B263261B67D57800E0A6D1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = VC/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		79E97FFB1B67D3BC0068B0FC /* WOLFMP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WOLFMP-Bridging-Header.h"; sourceTree = "<group>"; };
 		79E97FFC1B67D3BC0068B0FC /* temp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = temp.mm; path = OC/temp.mm; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 		770573561B68ADBD005F3252 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				77C4629E1B6A20FC00117364 /* XDKAirMenu */,
 				770573571B68ADC6005F3252 /* Toast */,
 			);
 			name = Lib;
@@ -88,9 +96,28 @@
 			name = Toast;
 			sourceTree = "<group>";
 		};
+		77C4629B1B6A168600117364 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				77C4629C1B6A16E400117364 /* ConversationListViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		77C4629E1B6A20FC00117364 /* XDKAirMenu */ = {
+			isa = PBXGroup;
+			children = (
+				77C4629F1B6A20FC00117364 /* XDKAirMenuController.h */,
+				77C462A01B6A20FC00117364 /* XDKAirMenuController.m */,
+			);
+			name = XDKAirMenu;
+			path = Lib/XDKAirMenu;
+			sourceTree = "<group>";
+		};
 		79B263241B67D53F00E0A6D1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				77C4629B1B6A168600117364 /* Chat */,
 				79B263251B67D54900E0A6D1 /* Login */,
 			);
 			name = VC;
@@ -99,6 +126,7 @@
 		79B263251B67D54900E0A6D1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				77C462A21B6A22F000117364 /* MenuViewController.swift */,
 				79B263261B67D57800E0A6D1 /* LoginViewController.swift */,
 				7705735A1B68B3AF005F3252 /* SignInViewController.swift */,
 			);
@@ -346,11 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7705735B1B68B3AF005F3252 /* SignInViewController.swift in Sources */,
+				77C462A31B6A22F000117364 /* MenuViewController.swift in Sources */,
 				79F33F581AEBF37C00D53C72 /* ViewController.swift in Sources */,
 				79F33F561AEBF37C00D53C72 /* WOLFMP.xcdatamodeld in Sources */,
 				770573591B68AE0B005F3252 /* HRToast+UIView.swift in Sources */,
 				79F33F531AEBF37C00D53C72 /* AppDelegate.swift in Sources */,
+				77C4629D1B6A16E400117364 /* ConversationListViewController.swift in Sources */,
 				79B263271B67D57800E0A6D1 /* LoginViewController.swift in Sources */,
+				77C462A11B6A20FC00117364 /* XDKAirMenuController.m in Sources */,
 				79E97FFD1B67D3BC0068B0FC /* temp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WOLFMP/WOLFMP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -502,6 +534,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WOLFMP/WOLFMP-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

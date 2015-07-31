@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A73FFC8C108E95582E7DD7EA"
+               BlueprintIdentifier = "245A1D7B7A738E8CFC051178"
                BuildableName = "Charts.bundle"
                BlueprintName = "ios-charts-Charts"
                ReferencedContainer = "container:Pods.xcodeproj">

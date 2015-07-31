@@ -8,7 +8,7 @@ PODS:
   - MGSwipeTableCell (1.5.1)
   - PDTSimpleCalendar (0.8.0)
   - QRCodeReader.swift (4.3.0)
-  - RongCloudKit (2.0.5)
+  - RongCloudIMKit (2.2.5)
   - Spring (1.0.3)
   - SwiftDictModel (0.1.4)
   - SwiftFilePath (0.0.4)
@@ -25,7 +25,7 @@ DEPENDENCIES:
   - MGSwipeTableCell
   - PDTSimpleCalendar
   - QRCodeReader.swift
-  - RongCloudKit
+  - RongCloudIMKit
   - Spring
   - SwiftDictModel
   - SwiftFilePath
@@ -42,7 +42,7 @@ SPEC CHECKSUMS:
   MGSwipeTableCell: a51fa670c01f0aa048f12af040acebf315223137
   PDTSimpleCalendar: 165e96cd8b808c98b3204effa4f4d519a3b71580
   QRCodeReader.swift: 0024e48765f18f4942147c9bc75dc89138016923
-  RongCloudKit: 2f8d31c4755b1e8903a25abb1dad5eab4061f12e
+  RongCloudIMKit: b596312663bf2c1a451c649968f3b69ed993c328
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftDictModel: 7c54f9a58c7a512f463346a524a662521acafaf4
   SwiftFilePath: 57d671d53b87ff371a3b2bf70416f1b49c12fe1d

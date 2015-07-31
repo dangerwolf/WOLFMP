@@ -1,6 +1,6 @@
 #include "Spring.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Spring" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BmobSDK" "${PODS_ROOT}/Headers/Public/BmobSDK/BmobSDK" "${PODS_ROOT}/Headers/Public/RongCloudKit" "${PODS_ROOT}/Headers/Public/RongCloudKit/RongIMKit" "${PODS_ROOT}/Headers/Public/RongCloudKit/RongIMLib"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Spring" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BmobSDK" "${PODS_ROOT}/Headers/Public/BmobSDK/BmobSDK" "${PODS_ROOT}/Headers/Public/RongCloudIMKit" "${PODS_ROOT}/Headers/Public/RongCloudIMKit/RongIMKit" "${PODS_ROOT}/Headers/Public/RongCloudIMKit/RongIMLib"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES

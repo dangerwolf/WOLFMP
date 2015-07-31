@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5262D7D51E76875593E8BCDE"
+               BlueprintIdentifier = "558C00153E54021F53010554"
                BuildableName = "SwiftFilePath.framework"
                BlueprintName = "SwiftFilePath"
                ReferencedContainer = "container:Pods.xcodeproj">

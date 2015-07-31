@@ -43,9 +43,9 @@ class MenuViewController: UIViewController ,XDKAirMenuDelegate {
         
         switch(indexPath.row){
             case 0:
-                vc = storyboard!.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UITabBarController
+                vc = storyboard!.instantiateViewControllerWithIdentifier("MainVC") as! UIViewController
             case 1:
-                vc = storyboard!.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UIViewController
+                vc = storyboard!.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UITabBarController
         default:
             break
         }

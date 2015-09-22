@@ -1,6 +1,0 @@
-framework module SwiftFilePath {
-  umbrella header "SwiftFilePath-umbrella.h"
-
-  export *
-  module * { export * }
-}

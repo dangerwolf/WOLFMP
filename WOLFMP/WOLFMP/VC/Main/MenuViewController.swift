@@ -38,12 +38,17 @@ class MenuViewController: UIViewController ,XDKAirMenuDelegate {
         let storyboard = self.storyboard
         var vc = UIViewController()
         vc.view.autoresizesSubviews = true
-        vc.view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        vc.view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+
         
+
         
+
         switch(indexPath.row){
+
             case 0:
-                vc = storyboard!.instantiateViewControllerWithIdentifier("MainVC") as! UIViewController
+
+                vc = storyboard!.instantiateViewControllerWithIdentifier("MainVC") 
             case 1:
                 vc = storyboard!.instantiateViewControllerWithIdentifier("MainTabbarVC") as! UITabBarController
         default:
@@ -68,7 +73,7 @@ class MenuViewController: UIViewController ,XDKAirMenuDelegate {
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "MenuTableSegue"){
-            self.tableView = segue.destinationViewController.tableView
+//            self.tableView = segue.destinationViewController.tableView
         }
     }
 

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     
 
     //MARK: 收键盘
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if !(userCodeTF.exclusiveTouch) {
             userCodeTF.resignFirstResponder()
         }
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
             if user != nil {
                 self.performSegueWithIdentifier("login2tMenuSegue", sender: self)
             }else{
-                let errrorInfo: AnyObject? = error.userInfo!.values.first
+                let errrorInfo: AnyObject? = error.userInfo.values.first
                 self.view.makeToast(message: "\(errrorInfo!)")
             }
         

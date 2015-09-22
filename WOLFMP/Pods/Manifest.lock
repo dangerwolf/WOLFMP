@@ -1,20 +1,18 @@
 PODS:
-  - Alamofire (1.3.0)
-  - BmobSDK (1.6.1)
-  - ChameleonFramework/Default (1.2.1)
-  - ChameleonFramework/Swift (1.2.1):
+  - Alamofire (2.0.2)
+  - BmobSDK (1.6.4)
+  - ChameleonFramework/Default (2.0.1)
+  - ChameleonFramework/Swift (2.0.1):
     - ChameleonFramework/Default
   - ios-charts (0.0.1)
   - MGSwipeTableCell (1.5.1)
-  - PDTSimpleCalendar (0.8.0)
-  - QRCodeReader.swift (4.3.0)
-  - RongCloudIMKit (2.2.5)
+  - PDTSimpleCalendar (0.9.1)
+  - QRCodeReader.swift (5.0.0)
+  - RongCloudIMKit (2.3.1)
   - Spring (1.0.3)
-  - SwiftDictModel (0.1.4)
-  - SwiftFilePath (0.0.4)
   - SwiftOverlays (0.14)
-  - SwiftyJSON (2.2.1)
-  - TextFieldEffects (0.4.1)
+  - SwiftyJSON (2.3.0)
+  - TextFieldEffects (0.4.3)
   - ToastSwift (0.1.3)
 
 DEPENDENCIES:
@@ -26,29 +24,35 @@ DEPENDENCIES:
   - PDTSimpleCalendar
   - QRCodeReader.swift
   - RongCloudIMKit
-  - Spring
-  - SwiftDictModel
-  - SwiftFilePath
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - SwiftOverlays
   - SwiftyJSON
   - TextFieldEffects
   - ToastSwift
 
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
-  Alamofire: 220403a8d5840e0b4c946a6fbaf209dbca124282
-  BmobSDK: 50b430dc7585a7f0527bb8b1a7d550a644ca3071
-  ChameleonFramework: 3476f813ac1615aef0a9a958f05520dfca47e09d
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  BmobSDK: 50aad04eae8c81ccdea6d6125c97e8cec49d8869
+  ChameleonFramework: c8e3d76f1c86a607b3b8ea776880bc5148b70c1a
   ios-charts: 9fe9e64632a8480b940e1ac66e73dd18d5358a83
   MGSwipeTableCell: a51fa670c01f0aa048f12af040acebf315223137
-  PDTSimpleCalendar: 165e96cd8b808c98b3204effa4f4d519a3b71580
-  QRCodeReader.swift: 0024e48765f18f4942147c9bc75dc89138016923
-  RongCloudIMKit: b596312663bf2c1a451c649968f3b69ed993c328
+  PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
+  QRCodeReader.swift: 49f5fcf4aefad47aaa24312bccd86de8f8447864
+  RongCloudIMKit: cb408a601cf23f7e506ebe1a7d95b54e74ade9af
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
-  SwiftDictModel: 7c54f9a58c7a512f463346a524a662521acafaf4
-  SwiftFilePath: 57d671d53b87ff371a3b2bf70416f1b49c12fe1d
   SwiftOverlays: 7df1e8cb3bba5e6f292fc231956d427f925fcd4e
-  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
-  TextFieldEffects: 955063c428d3262977d92c8804b3100e9142936a
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  TextFieldEffects: 19e5e4e560e95934654585b69fc2fea86c4a93a8
   ToastSwift: f593c1b9e86ab3913d144e3b214ec9047d696096
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0.beta.4

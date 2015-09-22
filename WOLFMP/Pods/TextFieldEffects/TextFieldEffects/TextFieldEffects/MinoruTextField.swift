@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable public class MinoruTextField: TextFieldEffects {
     
-    @IBInspectable public var placeholderColor: UIColor? {
+    @IBInspectable dynamic public var placeholderColor: UIColor? {
         didSet {
             updatePlaceholder()
         }
@@ -46,11 +46,11 @@ import UIKit
     
     // MARK: - TextFieldsEffectsProtocol
     
-    override func drawViewsForRect(rect: CGRect) {
+    override public func drawViewsForRect(rect: CGRect) {
         let frame = CGRect(origin: CGPointZero, size: CGSize(width: rect.size.width, height: rect.size.height))
         
         placeholderLabel.frame = CGRectInset(frame, placeholderInsets.x, placeholderInsets.y)
-        placeholderLabel.font = placeholderFontFromFont(font)
+        placeholderLabel.font = placeholderFontFromFont(font!)
         
         updateBorder()
         updatePlaceholder()
@@ -81,17 +81,13 @@ import UIKit
     }
     
     private func rectForBorder(bounds: CGRect) -> CGRect {
-        var newRect = CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height - font.lineHeight + textFieldInsets.y)
+        let newRect = CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height - font!.lineHeight + textFieldInsets.y)
         
         return newRect
     }
     
     private func layoutPlaceholderInTextRect() {
-        
-        if !text.isEmpty {
-            return
-        }
-        
+                
         let textRect = textRectForBounds(bounds)
         var originX = textRect.origin.x
         switch textAlignment {
@@ -106,7 +102,7 @@ import UIKit
             width: placeholderLabel.frame.size.width, height: placeholderLabel.frame.size.height)
     }
     
-    override func animateViewsForTextEntry() {
+    override public func animateViewsForTextEntry() {
         borderLayer.borderColor = textColor?.CGColor
         borderLayer.shadowOffset = CGSizeZero
         borderLayer.borderWidth = borderThickness
@@ -115,7 +111,7 @@ import UIKit
         borderLayer.shadowRadius = 1
     }
     
-    override func animateViewsForTextDisplay() {
+    override public func animateViewsForTextDisplay() {
         borderLayer.borderColor = nil
         borderLayer.shadowOffset = CGSizeZero
         borderLayer.borderWidth = 0

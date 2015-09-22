@@ -32,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if (bUser != nil)  {
             //            //进行操作
-            rootVC = storyboard.instantiateViewControllerWithIdentifier("MenuVC") as! UIViewController
+            rootVC = storyboard.instantiateViewControllerWithIdentifier("MenuVC") 
             
         }else{
             //对象为空时，可打开用户注册界面
-            rootVC = storyboard.instantiateViewControllerWithIdentifier("LoginVC") as! UIViewController
+            rootVC = storyboard.instantiateViewControllerWithIdentifier("LoginVC") 
             
         }
         self.window?.rootViewController = rootVC
@@ -47,12 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let deviceToken = NSUserDefaults.standardUserDefaults().objectForKey("kDeviceToken") as? String
         RCIM.sharedRCIM().initWithAppKey("pwe86ga5el156")
         RCIM.sharedRCIM().connectWithToken("oCFjtvES78B1y5+cjPfAbCnnPjd2QStGE2mvZH+ncIOGoL5Y1Nu4Zge5uMTKS79p9SaalGiru/dZgi+EzL497w==", success: { (successStr) -> Void in
-            println("融云连接成功")
-            println(successStr)
+            print("融云连接成功")
+            print(successStr)
         }, error: { (errorCode) -> Void in
-            println("融云连接不成功，\(errorCode)")
+            print("融云连接不成功，\(errorCode)")
         }) { (_) -> Void in
-            println("融云token不正确")
+            print("融云token不正确")
         }
         
         
@@ -91,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.wolf.WOLFMP" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as! NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -107,7 +107,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("WOLFMP.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -119,6 +122,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -140,11 +145,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

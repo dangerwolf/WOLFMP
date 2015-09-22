@@ -38,7 +38,7 @@ class SignInViewController: UIViewController {
     
     
     //MARK: 收键盘
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 
         if !(userCodeTF.exclusiveTouch) {
             userCodeTF.resignFirstResponder()
@@ -76,10 +76,10 @@ class SignInViewController: UIViewController {
         
         if !(usercode == "" || pwd == "" || pwdc == "" || email == "" || mobile == "") {
             if pwdc == pwd {
-                if (email.componentsSeparatedByString("@").count == 2 ) && (email.componentsSeparatedByString(".").count > 1 ) {
-                    if (mobile.length == 11) || (mobile.length == 14 ){
+                if (email!.componentsSeparatedByString("@").count == 2 ) && (email!.componentsSeparatedByString(".").count > 1 ) {
+                    if (mobile!.length == 11) || (mobile!.length == 14 ){
                         
-                        var bUser = BmobUser()
+                        let bUser = BmobUser()
                         bUser.username = usercode
                         bUser.password = pwd
                         bUser.email = email
@@ -101,7 +101,7 @@ class SignInViewController: UIViewController {
                                 self.presentViewController(alert, animated: true, completion: nil)
                                 
                             }else{
-                                self.showToast("\(error.userInfo!.values.first!)")
+                                self.showToast("\(error.userInfo.values.first!)")
                             }
                             
                         })

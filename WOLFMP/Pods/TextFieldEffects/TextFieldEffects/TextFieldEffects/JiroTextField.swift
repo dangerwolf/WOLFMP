@@ -10,12 +10,12 @@ import UIKit
 
 @IBDesignable public class JiroTextField: TextFieldEffects {
     
-    @IBInspectable public var borderColor: UIColor? {
+    @IBInspectable dynamic public var borderColor: UIColor? {
         didSet {
             updateBorder()
         }
     }
-    @IBInspectable public var placeholderColor: UIColor? {
+    @IBInspectable dynamic public var placeholderColor: UIColor? {
         didSet {
             updatePlaceholder()
         }
@@ -36,16 +36,16 @@ import UIKit
     
     private let borderThickness: CGFloat = 2
     private let placeholderInsets = CGPoint(x: 8, y: 8)
-    private let textFieldInsets = CGPoint(x:8, y:12)
+    private let textFieldInsets = CGPoint(x: 8, y: 12)
     private let borderLayer = CALayer()
     
     // MARK: - TextFieldsEffectsProtocol
     
-    override func drawViewsForRect(rect: CGRect) {
+    override public func drawViewsForRect(rect: CGRect) {
         let frame = CGRect(origin: CGPointZero, size: CGSize(width: rect.size.width, height: rect.size.height))
         
         placeholderLabel.frame = CGRectInset(frame, placeholderInsets.x, placeholderInsets.y)
-        placeholderLabel.font = placeholderFontFromFont(font)
+        placeholderLabel.font = placeholderFontFromFont(font!)
         
         updateBorder()
         updatePlaceholder()
@@ -55,7 +55,7 @@ import UIKit
     }
     
     private func updateBorder() {
-        borderLayer.frame = rectForBorder(borderThickness, isFill: false)
+        borderLayer.frame = rectForBorder(borderThickness, isFilled: false)
         borderLayer.backgroundColor = borderColor?.CGColor
     }
     
@@ -65,7 +65,7 @@ import UIKit
         placeholderLabel.sizeToFit()
         layoutPlaceholderInTextRect()
         
-        if isFirstResponder() || !text.isEmpty {
+        if isFirstResponder() || text!.isNotEmpty {
             animateViewsForTextEntry()
         }
     }
@@ -75,8 +75,8 @@ import UIKit
         return smallerFont
     }
     
-    private func rectForBorder(thickness: CGFloat, isFill: Bool) -> CGRect {
-        if isFill {
+    private func rectForBorder(thickness: CGFloat, isFilled: Bool) -> CGRect {
+        if isFilled {
             return CGRect(origin: CGPoint(x: 0, y: placeholderLabel.frame.origin.y + placeholderLabel.font.lineHeight), size: CGSize(width: CGRectGetWidth(frame), height: CGRectGetHeight(frame)))
         } else {
             return CGRect(origin: CGPoint(x: 0, y: CGRectGetHeight(frame)-thickness), size: CGSize(width: CGRectGetWidth(frame), height: thickness))
@@ -85,7 +85,7 @@ import UIKit
     
     private func layoutPlaceholderInTextRect() {
         
-        if !text.isEmpty {
+        if text!.isNotEmpty {
             return
         }
         
@@ -103,25 +103,25 @@ import UIKit
             width: placeholderLabel.frame.size.width, height: placeholderLabel.frame.size.height)
     }
     
-    override func animateViewsForTextEntry() {
-        borderLayer.frame.origin = CGPoint(x: 0, y: font.lineHeight)
+    override public func animateViewsForTextEntry() {
+        borderLayer.frame.origin = CGPoint(x: 0, y: font!.lineHeight)
         
-        UIView.animateWithDuration(0.2, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: UIViewAnimationOptions.BeginFromCurrentState, animations: ({
+        UIView.animateWithDuration(0.2, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: .BeginFromCurrentState, animations: ({
             
             self.placeholderLabel.frame.origin = CGPoint(x: self.placeholderInsets.x, y: self.borderLayer.frame.origin.y - self.placeholderLabel.bounds.height)
-            self.borderLayer.frame = self.rectForBorder(self.borderThickness, isFill: true)
+            self.borderLayer.frame = self.rectForBorder(self.borderThickness, isFilled: true)
             
         }), completion:nil)
     }
     
-    override func animateViewsForTextDisplay() {
-        if text.isEmpty {
-            UIView.animateWithDuration(0.35, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: UIViewAnimationOptions.BeginFromCurrentState, animations: ({
+    override public func animateViewsForTextDisplay() {
+        if text!.isEmpty {
+            UIView.animateWithDuration(0.35, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2.0, options: .BeginFromCurrentState, animations: ({
                 self.layoutPlaceholderInTextRect()
                 self.placeholderLabel.alpha = 1
             }), completion: nil)
             
-            borderLayer.frame = rectForBorder(borderThickness, isFill: false)
+            borderLayer.frame = rectForBorder(borderThickness, isFilled: false)
         }
     }
     

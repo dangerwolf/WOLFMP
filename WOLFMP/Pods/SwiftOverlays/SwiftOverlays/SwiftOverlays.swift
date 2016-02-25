@@ -38,25 +38,66 @@ public extension UIViewController {
 }
 
 public class SwiftOverlays: NSObject {
-    // Workaround for "Class variables not yet supported"
     // You can customize these values
-    struct Statics {
-        // Some random number
-        static let containerViewTag = 456987123
-        
-        static let cornerRadius = CGFloat(10)
-        static let padding = CGFloat(10)
-        
-        static let backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
-        static let textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        static let font = UIFont(name: "HelveticaNeue", size: 14)!
-        
-        // Annoying notifications on top of status bar
-        static let bannerDissapearAnimationDuration = 0.5
-    }
+
+    // Some random number
+    static let containerViewTag = 456987123
     
-    private struct PrivateStaticVars {
-        static var bannerWindow : UIWindow?
+    static let cornerRadius = CGFloat(10)
+    static let padding = CGFloat(10)
+    
+    static let backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
+    static let textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+    static let font = UIFont.systemFontOfSize(14)
+    
+    // Annoying notifications on top of status bar
+    static let bannerDissapearAnimationDuration = 0.5
+
+    static var bannerWindow : UIWindow?
+    
+    public class Utils {
+        
+        /**
+            Adds autolayout constraints to innerView to center it in its superview and fix its size.
+            `innerView` should have a superview.
+        
+            - parameter innerView: View to set constraints on
+        */
+        public static func centerViewInSuperview(view: UIView) {
+            assert(view.superview != nil, "`view` should have a superview")
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            
+            let constraintH = NSLayoutConstraint(item: view,
+                attribute: NSLayoutAttribute.CenterX,
+                relatedBy: NSLayoutRelation.Equal,
+                toItem: view.superview,
+                attribute: NSLayoutAttribute.CenterX,
+                multiplier: 1,
+                constant: 0)
+            let constraintV = NSLayoutConstraint(item: view,
+                attribute: NSLayoutAttribute.CenterY,
+                relatedBy: NSLayoutRelation.Equal,
+                toItem: view.superview,
+                attribute: NSLayoutAttribute.CenterY,
+                multiplier: 1,
+                constant: 0)
+            let constraintWidth = NSLayoutConstraint(item: view,
+                attribute: NSLayoutAttribute.Width,
+                relatedBy: NSLayoutRelation.Equal,
+                toItem: nil,
+                attribute: NSLayoutAttribute.NotAnAttribute,
+                multiplier: 1,
+                constant: view.frame.size.width)
+            let constraintHeight = NSLayoutConstraint(item: view,
+                attribute: NSLayoutAttribute.Height,
+                relatedBy: NSLayoutRelation.Equal,
+                toItem: nil,
+                attribute: NSLayoutAttribute.NotAnAttribute,
+                multiplier: 1,
+                constant: view.frame.size.height)
+            view.superview!.addConstraints([constraintV, constraintH, constraintWidth, constraintHeight])
+        }
     }
     
     // MARK: - Public class methods -
@@ -109,9 +150,9 @@ public class SwiftOverlays: NSObject {
         
         let containerView = UIView(frame: containerViewRect)
         
-        containerView.tag = Statics.containerViewTag
-        containerView.layer.cornerRadius = Statics.cornerRadius
-        containerView.backgroundColor = Statics.backgroundColor
+        containerView.tag = containerViewTag
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.backgroundColor = backgroundColor
         containerView.center = CGPointMake(parentView.bounds.size.width/2,
             parentView.bounds.size.height/2);
         
@@ -121,6 +162,8 @@ public class SwiftOverlays: NSObject {
         containerView.addSubview(ai)
         
         parentView.addSubview(containerView)
+        
+        Utils.centerViewInSuperview(containerView)
         
         return containerView
     }
@@ -140,10 +183,10 @@ public class SwiftOverlays: NSObject {
 
     public class func showGenericOverlay(parentView: UIView, text: NSString, accessoryView: UIView) -> UIView {
         let label = labelForText(text)
-        label.frame = CGRectOffset(label.frame, accessoryView.frame.size.width + Statics.padding * 2, Statics.padding)
+        label.frame = CGRectOffset(label.frame, accessoryView.frame.size.width + padding * 2, padding)
         
-        let actualSize = CGSizeMake(accessoryView.frame.size.width + label.frame.size.width + Statics.padding * 3,
-            max(label.frame.size.height, accessoryView.frame.size.height) + Statics.padding * 2)
+        let actualSize = CGSizeMake(accessoryView.frame.size.width + label.frame.size.width + padding * 3,
+            max(label.frame.size.height, accessoryView.frame.size.height) + padding * 2)
         
         // Container view
         let containerViewRect = CGRectMake(0,
@@ -152,29 +195,31 @@ public class SwiftOverlays: NSObject {
             actualSize.height)
         
         let containerView = UIView(frame: containerViewRect)
-        
-        containerView.tag = Statics.containerViewTag
-        containerView.layer.cornerRadius = Statics.cornerRadius
-        containerView.backgroundColor = Statics.backgroundColor
+     
+        containerView.tag = containerViewTag
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.backgroundColor = backgroundColor
         containerView.center = CGPointMake(parentView.bounds.size.width/2,
             parentView.bounds.size.height/2);
         
-        accessoryView.frame = CGRectOffset(accessoryView.frame, Statics.padding, (actualSize.height - accessoryView.frame.size.height)/2)
+        accessoryView.frame = CGRectOffset(accessoryView.frame, padding, (actualSize.height - accessoryView.frame.size.height)/2)
         
         containerView.addSubview(accessoryView)
         containerView.addSubview(label)
         
         parentView.addSubview(containerView)
         
+        Utils.centerViewInSuperview(containerView)
+
         return containerView
     }
     
     public class func showTextOverlay(parentView: UIView, text: NSString) -> UIView  {
         let label = labelForText(text)
-        label.frame = CGRectOffset(label.frame, Statics.padding, Statics.padding)
+        label.frame = CGRectOffset(label.frame, padding, padding)
         
-        let actualSize = CGSizeMake(label.frame.size.width + Statics.padding * 2,
-            label.frame.size.height + Statics.padding * 2)
+        let actualSize = CGSizeMake(label.frame.size.width + padding * 2,
+            label.frame.size.height + padding * 2)
         
         // Container view
         let containerViewRect = CGRectMake(0,
@@ -184,15 +229,18 @@ public class SwiftOverlays: NSObject {
         
         let containerView = UIView(frame: containerViewRect)
         
-        containerView.tag = Statics.containerViewTag
-        containerView.layer.cornerRadius = Statics.cornerRadius
-        containerView.backgroundColor = Statics.backgroundColor
+        containerView.tag = containerViewTag
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.backgroundColor = backgroundColor
         containerView.center = CGPointMake(parentView.bounds.size.width/2,
             parentView.bounds.size.height/2);
 
         containerView.addSubview(label)
         
         parentView.addSubview(containerView)
+        
+        Utils.centerViewInSuperview(containerView)
+        
         
         return containerView
     }
@@ -201,7 +249,7 @@ public class SwiftOverlays: NSObject {
         var overlay: UIView?
 
         while true {
-            overlay = parentView.viewWithTag(Statics.containerViewTag)
+            overlay = parentView.viewWithTag(containerViewTag)
             if overlay == nil {
                 break
             }
@@ -210,20 +258,22 @@ public class SwiftOverlays: NSObject {
         }
     }
     
+    // MARK: Status bar notification
+    
     public class func showAnnoyingNotificationOnTopOfStatusBar(notificationView: UIView, duration: NSTimeInterval) {
-        if PrivateStaticVars.bannerWindow == nil {
-            PrivateStaticVars.bannerWindow = UIWindow()
-            PrivateStaticVars.bannerWindow!.windowLevel = UIWindowLevelStatusBar + 1
+        if bannerWindow == nil {
+            bannerWindow = UIWindow()
+            bannerWindow!.windowLevel = UIWindowLevelStatusBar + 1
         }
         
-        PrivateStaticVars.bannerWindow!.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, notificationView.frame.size.height)
-        PrivateStaticVars.bannerWindow!.hidden = false
+        bannerWindow!.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, notificationView.frame.size.height)
+        bannerWindow!.hidden = false
         
         let selector = Selector("closeAnnoyingNotificationOnTopOfStatusBar:")
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: selector)
         notificationView.addGestureRecognizer(gestureRecognizer)
         
-        PrivateStaticVars.bannerWindow!.addSubview(notificationView)
+        bannerWindow!.addSubview(notificationView)
         self.performSelector(selector, withObject: notificationView, afterDelay: duration)
     }
     
@@ -238,7 +288,7 @@ public class SwiftOverlays: NSObject {
             notificationView = (sender as! UIView)
         }
         
-        UIView.animateWithDuration(Statics.bannerDissapearAnimationDuration,
+        UIView.animateWithDuration(bannerDissapearAnimationDuration,
             animations: { () -> Void in
                 let frame = notificationView!.frame
                 notificationView!.frame = frame.offsetBy(dx: 0, dy: -frame.size.height)
@@ -246,7 +296,7 @@ public class SwiftOverlays: NSObject {
             completion: { (finished) -> Void in
                 notificationView!.removeFromSuperview()
                 
-                PrivateStaticVars.bannerWindow!.hidden = true
+                bannerWindow!.hidden = true
             }
         )
     }
@@ -254,7 +304,7 @@ public class SwiftOverlays: NSObject {
     // MARK: - Private class methods -
     
     private class func labelForText(text: NSString) -> UILabel {
-        let textSize = text.sizeWithAttributes([NSFontAttributeName: Statics.font])
+        let textSize = text.sizeWithAttributes([NSFontAttributeName: font])
         
         let labelRect = CGRectMake(0,
             0,
@@ -262,8 +312,8 @@ public class SwiftOverlays: NSObject {
             textSize.height)
         
         let label = UILabel(frame: labelRect)
-        label.font = Statics.font
-        label.textColor = Statics.textColor
+        label.font = font
+        label.textColor = textColor
         label.text = text as String
         label.numberOfLines = 0
         
@@ -274,10 +324,27 @@ public class SwiftOverlays: NSObject {
         let window = UIApplication.sharedApplication().delegate!.window!!
         
         let blocker = UIView(frame: window.bounds)
-        blocker.backgroundColor = Statics.backgroundColor
-        blocker.tag = Statics.containerViewTag
+        blocker.backgroundColor = backgroundColor
+        blocker.tag = containerViewTag
         
+        blocker.translatesAutoresizingMaskIntoConstraints = false
+
         window.addSubview(blocker)
+        
+        let viewsDictionary = ["blocker": blocker]
+        
+        // Add constraints to handle orientation change
+        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[blocker]-0-|",
+            options: NSLayoutFormatOptions(rawValue: 0),
+            metrics: nil,
+            views: viewsDictionary)
+        
+        let constraintsH = NSLayoutConstraint.constraintsWithVisualFormat("|-0-[blocker]-0-|",
+            options: NSLayoutFormatOptions(rawValue: 0),
+            metrics: nil,
+            views: viewsDictionary)
+        
+        window.addConstraints(constraintsV + constraintsH)
         
         return blocker
     }

@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ An AkiraTextField is a subclass of the TextFieldEffects object, is a control that displays an UITextField with a customizable visual effect around the edges of the control.
+ */
 @IBDesignable public class AkiraTextField : TextFieldEffects {
     
     private let borderSize : (active: CGFloat, inactive: CGFloat) = (1, 2)
@@ -15,13 +18,34 @@ import UIKit
     private let textFieldInsets = CGPoint(x: 6, y: 0)
     private let placeHolderInsets = CGPoint(x: 6, y: 0)
     
+    /**
+     The color of the border.
+     
+     This property applies a color to the bounds of the control. The default value for this property is a clear color.
+    */
     @IBInspectable dynamic public var borderColor: UIColor? {
         didSet {
             updateBorder()
         }
     }
     
-    @IBInspectable dynamic public var placeholderColor: UIColor? {
+    /**
+     The color of the placeholder text.
+     
+     This property applies a color to the complete placeholder string. The default value for this property is a  black color.
+     */
+    @IBInspectable dynamic public var placeholderColor: UIColor = .blackColor() {
+        didSet {
+            updatePlaceholder()
+        }
+    }
+    
+    /**
+     The scale of the placeholder font.
+     
+     This property determines the size of the placeholder label relative to the font size of the text field.
+     */
+    @IBInspectable dynamic public var placeholderFontScale: CGFloat = 0.7 {
         didSet {
             updatePlaceholder()
         }
@@ -38,6 +62,8 @@ import UIKit
             updateBorder()
         }
     }
+    
+    // MARK: TextFieldEffects
     
     override public func drawViewsForRect(rect: CGRect) {
         updateBorder()
@@ -61,6 +87,8 @@ import UIKit
         })
     }
     
+    // MARK: Private
+    
     private func updatePlaceholder() {
         placeholderLabel.frame = placeholderRectForBounds(bounds)
         placeholderLabel.text = placeholder
@@ -76,7 +104,7 @@ import UIKit
     }
     
     private func placeholderFontFromFont(font: UIFont) -> UIFont! {
-        let smallerFont = UIFont(name: font.fontName, size: font.pointSize * 0.7)
+        let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
         return smallerFont
     }
     
@@ -88,6 +116,8 @@ import UIKit
         return CGRect(x: bounds.origin.x, y: bounds.origin.y + placeholderHeight, width: bounds.size.width, height: bounds.size.height - placeholderHeight)
     }
     
+    // MARK: - Overrides
+    
     public override func placeholderRectForBounds(bounds: CGRect) -> CGRect {
         if isFirstResponder() || text!.isNotEmpty {
             return CGRectMake(placeHolderInsets.x, placeHolderInsets.y, bounds.width, placeholderHeight)
@@ -95,8 +125,6 @@ import UIKit
             return textRectForBounds(bounds)
         }
     }
-    
-    // MARK: - Overrides
     
     public override func editingRectForBounds(bounds: CGRect) -> CGRect {
         return textRectForBounds(bounds)

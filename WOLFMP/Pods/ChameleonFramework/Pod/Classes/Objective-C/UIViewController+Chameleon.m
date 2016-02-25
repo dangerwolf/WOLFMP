@@ -19,6 +19,7 @@
 #import "UIView+ChameleonPrivate.h"
 #import "UILabel+Chameleon.h"
 #import "UIButton+Chameleon.h"
+#import "UIAppearance+Swift.h"
 
 @interface UIViewController ()
 
@@ -94,10 +95,6 @@
 
 #pragma mark - Methods
 
-- (void)flatify {
-
-}
-
 
 - (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
     
@@ -140,7 +137,7 @@
             return UIStatusBarStyleLightContent;
             
         } else {
-            return UIStatusBarStyleDefault;
+            return [self chameleon_preferredStatusBarStyle];
         }
     }
 }
@@ -177,6 +174,7 @@
     [[self class] customizeSwitchWithPrimaryColor:primaryColor];
     [[self class] customizeTabBarWithBarTintColor:FlatWhite andTintColor:primaryColor];
     [[self class] customizeToolbarWithPrimaryColor:primaryColor withContentStyle:contentStyle];
+    [[self class] customizeImagePickerControllerWithPrimaryColor:primaryColor withContentStyle:contentStyle];
 }
 
 - (void)setThemeUsingPrimaryColor:(UIColor *)primaryColor
@@ -212,6 +210,7 @@
     [[self class] customizeSwitchWithPrimaryColor:primaryColor andSecondaryColor:secondaryColor];
     [[self class] customizeTabBarWithBarTintColor:FlatWhite andTintColor:primaryColor];
     [[self class] customizeToolbarWithPrimaryColor:primaryColor withContentStyle:contentStyle];
+    [[self class] customizeImagePickerControllerWithPrimaryColor:primaryColor withContentStyle:contentStyle];
 }
 
 - (void)setThemeUsingPrimaryColor:(UIColor *)primaryColor
@@ -251,6 +250,7 @@
     [[self class] customizeSwitchWithPrimaryColor:primaryColor andSecondaryColor:secondaryColor];
     [[self class] customizeTabBarWithBarTintColor:FlatWhite andTintColor:primaryColor];
     [[self class] customizeToolbarWithPrimaryColor:primaryColor withContentStyle:contentStyle];
+    [[self class] customizeImagePickerControllerWithPrimaryColor:primaryColor withContentStyle:contentStyle];
 }
 
 #pragma mark - UIBarButtonItem
@@ -414,6 +414,44 @@
     
 }
 
+#pragma mark - UIImagePickerController
+
++ (void)customizeImagePickerControllerWithPrimaryColor:(UIColor *)primaryColor withContentStyle:(UIContentStyle)contentStyle {
+    
+    UIColor *contentColor;
+    switch (contentStyle) {
+        case UIContentStyleContrast: {
+            contentColor = ContrastColor(primaryColor, NO);
+            break;
+        }
+        case UIContentStyleLight: {
+            contentColor = [UIColor whiteColor];
+            break;
+        }
+        case UIContentStyleDark: {
+            contentColor = FlatBlackDark;
+            break;
+        }
+        default: {
+            contentColor = ContrastColor(primaryColor, NO);
+            break;
+        }
+    }
+    
+    //Workaround for Swift http://stackoverflow.com/a/28765193
+    [[UIButton appearanceWhenContainedWithin:@[[UIView class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UIView class],[UIImagePickerController class]]] setTintColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UINavigationBar class],[UIImagePickerController class]]] setTintColor:contentColor];
+    [[UIButton appearanceWhenContainedWithin:@[[UITableViewCell class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class],[UIImagePickerController class]]] setTintColor:contentColor];
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class],[UIImagePickerController class]]] setTintColor:contentColor];
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableViewCell class],[UIImagePickerController class]]] setBackgroundColor:ClearColor];
+}
+
 #pragma mark - UILabel
 
 + (void)customizeLabelWithPrimaryColor:(UIColor *)primaryColor
@@ -482,7 +520,7 @@
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTintColor:contentColor];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName:contentColor}];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setShadowImage:[UIImage new]];
-    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 }
 
 + (void)customizeNavigationBarWithBarColor:(UIColor *)barColor
@@ -493,7 +531,7 @@
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTintColor:buttonColor];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName:textColor}];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setShadowImage:[UIImage new]];
-    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 }
 
 + (void)customizeNavigationBarWithBarColor:(UIColor *)barColor
@@ -505,7 +543,7 @@
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBarTintColor:barColor];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTintColor:buttonColor];
     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setShadowImage:[UIImage new]];
-    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     
     if ([UIFont fontWithName:fontName size:fontSize]) {
         [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setTitleTextAttributes:@{ NSForegroundColorAttributeName:textColor, NSFontAttributeName:[UIFont fontWithName:fontName size:fontSize] }];

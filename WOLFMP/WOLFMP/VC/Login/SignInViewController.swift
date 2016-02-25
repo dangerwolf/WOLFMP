@@ -8,7 +8,6 @@
 
 import UIKit
 import TextFieldEffects
-import ToastSwift
 import Spring
 
 class SignInViewController: UIViewController {

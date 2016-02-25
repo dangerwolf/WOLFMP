@@ -59,14 +59,11 @@
     //Choose Between Schemes
     switch (colorScheme) {
         case ColorSchemeAnalogous:
-            if (isFlatScheme) return [self analogousColorSchemeFromHue:h Saturation:s Brightness:b flat:YES];
-            else return [self analogousColorSchemeFromHue:h Saturation:s Brightness:b flat:NO];
+            return [self analogousColorSchemeFromHue:h Saturation:s Brightness:b flat:isFlatScheme];
         case ColorSchemeComplementary:
-            if (isFlatScheme) return [self complementaryColorSchemeFromHue:h Saturation:s Brightness:b flat:YES];
-            else return [self complementaryColorSchemeFromHue:h Saturation:s Brightness:b flat:NO];
+            return [self complementaryColorSchemeFromHue:h Saturation:s Brightness:b flat:isFlatScheme];
         case ColorSchemeTriadic:
-            if (isFlatScheme) return [self triadicColorSchemeFromHue:h Saturation:s Brightness:b flat:YES];
-            else return [self triadicColorSchemeFromHue:h Saturation:s Brightness:b flat:NO];
+            return [self triadicColorSchemeFromHue:h Saturation:s Brightness:b flat:isFlatScheme];
         default:
             NSAssert(0, @"Oops! Unrecognized color scheme provided as random color.");
     }
@@ -661,7 +658,7 @@
 + (UIColor *)nearestFlatColorForL:(CGFloat)l1 A:(CGFloat)a1 B:(CGFloat)b1 alpha:(CGFloat)alpha{
     
     //Keep track of our index
-    float index = 0;
+    int index = 0;
     
     //Start with a random big number to make sure the first comparison gets saved.
     float smallestDistance = 1000000;
@@ -703,7 +700,7 @@
     
     //Collect the RGB Values of the color where the smallest difference was found
     CGFloat red, green, blue;
-    [[[self flatColors] objectAtIndex:index] getRed:&red green:&green blue:&blue alpha:nil];
+    [[self flatColors][index] getRed:&red green:&green blue:&blue alpha:nil];
     
     //Return the closest flat color
     return rgba(red*255, green*255, blue*255, alpha);

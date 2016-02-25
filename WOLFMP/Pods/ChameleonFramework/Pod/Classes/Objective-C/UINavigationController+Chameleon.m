@@ -26,6 +26,74 @@
 
 @implementation UINavigationController (Chameleon)
 
+@dynamic hidesNavigationBarHairline;
+
+#pragma mark - Swizzling
+
++ (void)load {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        Class class = [self class];
+        
+        SEL originalSelector = @selector(viewDidLoad);
+        SEL swizzledSelector = @selector(chameleon_viewDidLoad);
+        
+        Method originalMethod = class_getInstanceMethod(class, originalSelector);
+        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+        
+        BOOL didAddMethod =
+        class_addMethod(class,
+                        originalSelector,
+                        method_getImplementation(swizzledMethod),
+                        method_getTypeEncoding(swizzledMethod));
+        
+        if (didAddMethod) {
+            class_replaceMethod(class,
+                                swizzledSelector,
+                                method_getImplementation(originalMethod),
+                                method_getTypeEncoding(originalMethod));
+            
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+    });
+}
+
+- (void)chameleon_viewDidLoad {
+   
+    [self chameleon_viewDidLoad];
+    
+    UIView *hairlineImageView = [self findHairlineImageViewUnder:self.navigationBar];
+    
+    if (hairlineImageView) {
+        
+        if (self.hidesNavigationBarHairline) {
+             hairlineImageView.hidden = YES;
+            
+        } else {
+             hairlineImageView.hidden = NO;
+        }
+    }
+}
+
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
+    
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    
+    return nil;
+}
+
 #pragma mark - Runtime
 
 - (void)setShouldContrast:(BOOL)contrast {
@@ -52,6 +120,34 @@
     return [number boolValue];
 }
 
+- (void)setHidesNavigationBarHairline:(BOOL)hidesNavigationBarHairline {
+    
+    NSNumber *number = [NSNumber numberWithBool:hidesNavigationBarHairline];
+    objc_setAssociatedObject(self, @selector(hidesNavigationBarHairline), number, OBJC_ASSOCIATION_RETAIN);
+    
+    //Find Hairline Image
+    UIView *hairlineImageView = [self findHairlineImageViewUnder:self.navigationBar];
+    
+    //Check if it exists
+    if (hairlineImageView) {
+        
+        //Check if we should hide it or not
+        if (hidesNavigationBarHairline) {
+            hairlineImageView.hidden = YES;
+            
+        } else {
+            hairlineImageView.hidden = NO;
+        }
+    }
+}
+
+- (BOOL)hidesNavigationBarHairline {
+    
+    NSNumber *number = objc_getAssociatedObject(self, @selector(hidesNavigationBarHairline));
+    return [number boolValue];
+}
+
+
 #pragma mark - Public Methods
 
 - (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
@@ -73,7 +169,6 @@
         
     }
 }
-
 
 #pragma mark - Private Methods
 

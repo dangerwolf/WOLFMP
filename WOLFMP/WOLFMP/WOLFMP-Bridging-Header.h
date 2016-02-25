@@ -3,6 +3,4 @@
 //
 
 #import <BmobSDK/Bmob.h>
-#import <RongIMkit/RCIM.h>
-#import <RongIMkit/RongIMKit.h>
 #import "XDKAirMenuController.h"

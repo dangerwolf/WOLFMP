@@ -1,5 +1,7 @@
 ![QRCodeReader.swift](http://yannickloriot.com/resources/qrcodereader.swift-logo.png)
 
+[![License](https://cocoapod-badges.herokuapp.com/l/QRCodeReader.swift/badge.svg)](http://cocoadocs.org/docsets/QRCodeReader.swift/) [![Supported Plateforms](https://cocoapod-badges.herokuapp.com/p/QRCodeReader.swift/badge.svg)](http://cocoadocs.org/docsets/QRCodeReader.swift/) [![Version](https://cocoapod-badges.herokuapp.com/v/QRCodeReader.swift/badge.svg)](http://cocoadocs.org/docsets/QRCodeReader.swift/)
+
 The _QRCodeReader.swift_ was initially a simple QRCode reader but it now lets you the possibility to specify the [format type](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVMetadataMachineReadableCodeObject_Class/index.html#//apple_ref/doc/constant_group/Machine_Readable_Object_Types) you want to decode. It is based on the `AVFoundation` framework from Apple in order to replace ZXing or ZBar for iOS 8.0 and over.
 
 It provides a default view controller to display the camera view with the scan area overlay and it also provides a button to switch between the front and the back cameras.
@@ -7,6 +9,41 @@ It provides a default view controller to display the camera view with the scan a
 ![screenshot](http://yannickloriot.com/resources/qrcodereader.swift-screenshot.jpg)
 
 *Note: the v4.x or over are compatibles with swift 1.2, use the v3 with XCode 6.2 or lower.*
+
+## Usage
+
+```swift
+// Good practice: create the reader lazily to avoid cpu overload during the
+// initialization and each time we need to scan a QRCode
+lazy var reader = QRCodeReaderViewController(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
+
+@IBAction func scanAction(sender: AnyObject) {
+  // Retrieve the QRCode content
+  // By using the delegate pattern
+  reader.delegate = self
+
+  // Or by using the closure pattern
+  reader.completionBlock = { (result: QRCodeReaderResult?) in
+    println(result)
+  }
+
+  // Presents the reader as modal form sheet
+  reader.modalPresentationStyle = .FormSheet
+  presentViewController(reader, animated: true, completion: nil)
+}
+
+// MARK: - QRCodeReader Delegate Methods
+
+func reader(reader: QRCodeReader, didScanResult result: QRCodeReaderResult) {
+  self.dismissViewControllerAnimated(true, completion: nil)
+}
+
+func readerDidCancel(reader: QRCodeReader) {
+  self.dismissViewControllerAnimated(true, completion: nil)
+}
+```
+
+*Note that you should check whether the device supports the reader library by using the `QRCodeReader.isAvailable()` or the `QRCodeReader.supportsMetadataObjectTypes()` methods.*
 
 ### Installation
 
@@ -30,7 +67,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 use_frameworks!
-pod 'QRCodeReader.swift', '~> 5.0.0'
+pod 'QRCodeReader.swift', '~> 5.3.1'
 ```
 
 Install into your project:
@@ -61,47 +98,12 @@ $ brew install carthage
 To integrate `QRCodeReader` into your Xcode project using Carthage, specify it in your `Cartfile` file:
 
 ```ogdl
-github "yannickl/QRCodeReader.swift" >= 5.0.0
+github "yannickl/QRCodeReader.swift" >= 5.3.1
 ```
 
 #### Manually
 
 [Download](https://github.com/YannickL/QRCodeReader.swift/archive/master.zip) the project and copy the `QRCodeReader` folder into your project to use it in.
-
-## Usage
-
-```swift
-// Good practice: create the reader lazily to avoid cpu overload during the
-// initialization and each time we need to scan a QRCode
-lazy var reader = QRCodeReaderViewController(metadataObjectTypes: [AVMetadataObjectTypeQRCode])
-
-@IBAction func scanAction(sender: AnyObject) {
-  // Retrieve the QRCode content
-  // By using the delegate pattern
-  reader.delegate = self
-
-  // Or by using the closure pattern
-  reader.completionBlock = { (result: String?) in
-    println(result)
-  }
-
-  // Presents the reader as modal form sheet
-  reader.modalPresentationStyle = .FormSheet
-  presentViewController(reader, animated: true, completion: nil)
-}
-
-// MARK: - QRCodeReader Delegate Methods
-
-func reader(reader: QRCodeReader, didScanResult result: String) {
-  self.dismissViewControllerAnimated(true, completion: nil)
-}
-
-func readerDidCancel(reader: QRCodeReader) {
-  self.dismissViewControllerAnimated(true, completion: nil)
-}
-```
-
-*Note that you should check whether the device supports the reader library by using the `QRCodeReader.isAvailable()` or the `QRCodeReader.supportsMetadataObjectTypes()` methods.*
 
 ## Contact
 

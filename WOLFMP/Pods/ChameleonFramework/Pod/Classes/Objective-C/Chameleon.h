@@ -1,66 +1,31 @@
 //
-//  ChameleonInternal.h
+//  Chameleon.h
 //  Chameleon
 //
-//  Created by Vicc Alexander on 6/4/15.
-//  Copyright (c) 2015 Vicc Alexander. All rights reserved.
+//  Created by Vicc Alexander on 9/24/15.
+//  Copyright © 2015 Vicc Alexander. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "ChameleonConstants.h"
-#import "ChameleonEnums.h"
-#import "ChameleonMacros.h"
+//! Project version number for Chameleon.
+FOUNDATION_EXPORT double ChameleonVersionNumber;
+
+//! Project version string for Chameleon.
+FOUNDATION_EXPORT const unsigned char ChameleonVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <Chameleon/PublicHeader.h>
+
+#import "Chameleon_.h"
+
+#import "UIButton+Chameleon.h"
+#import "UILabel+Chameleon.h"
+#import "UIColor+ChameleonPrivate.h"
+#import "UIImage+ChameleonPrivate.h"
+#import "UIView+ChameleonPrivate.h"
+#import "UIAppearance+Swift.h"
 
 #import "NSArray+Chameleon.h"
 #import "UIColor+Chameleon.h"
 #import "UINavigationController+Chameleon.h"
 #import "UIViewController+Chameleon.h"
-
-@interface Chameleon : NSObject
-
-#pragma mark - Global Theming
-
-/**
- *  Set a global theme using a primary color.
- *
- *  @param primaryColor The primary color to theme all controllers with.
- *  @param contentStyle The contentStyle.
- *
- *  @note By default the secondary color will be a darker shade of the specified primary color.
- *
- *  @since 2.0
- */
-+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor
-                 withContentStyle:(UIContentStyle)contentStyle;
-
-/**
- *  Set a global theme using a primary color.
- *
- *  @param primaryColor   The primary color to theme all controllers with.
- *  @param secondaryColor The secondary color to theme all controllers with.
- *  @param contentStyle   The contentStyle.
- *
- *  @since 2.0
- */
-+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor
-               withSecondaryColor:(UIColor *)secondaryColor
-                  andContentStyle:(UIContentStyle)contentStyle;
-
-/**
- *  Set a global theme using a primary color.
- *
- *  @param primaryColor   The primary color to theme all controllers with.
- *  @param secondaryColor The secondary color to theme all controllers with.
- *  @param fontName       The default font for all text-based UI elements.
- *  @param contentStyle   The contentStyle.
- *
- *  @since 2.0
- */
-+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor
-               withSecondaryColor:(UIColor *)secondaryColor
-                    usingFontName:(NSString *)fontName
-                  andContentStyle:(UIContentStyle)contentStyle;
-
-@end

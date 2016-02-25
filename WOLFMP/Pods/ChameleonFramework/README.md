@@ -2,17 +2,31 @@
   <img src="http://i.imgur.com/BwqHhB4.png" alt="Chameleon by Vicc Alexander"/>
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/downloads-64,933+-ffc003.svg?style=flat" alt="Downloads"/>
+    <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat" alt="Platform: iOS 8+"/>
+    <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift2-compatible-4BC51D.svg?style=flat" alt="Language: Swift 2" /></a>
+    <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
+    <a href="https://cocoapods.org/pods/ChameleonFramework"><img src="https://cocoapod-badges.herokuapp.com/v/ChameleonFramework/badge.png" alt="Cocoapods compatible" /></a>
+    <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" /> <br><br>
+    <a href="https://gratipay.com/chameleon/"><img src="https://img.shields.io/badge/Donate-%241%2Fweek-yellow.svg?style=social" alt="Donate"/></a>
+</p>
+
 ## Introduction
 
-**Chameleon** is a lightweight, yet powerful, flat color framework for iOS (Objective-C & Swift). It is built on the idea that software applications should function effortlessly while simultaneously maintaining their beautiful interfaces.
+**Chameleon** is a lightweight, yet powerful, color framework for iOS (Objective-C & Swift). It is built on the idea that software applications should function effortlessly while simultaneously maintaining their beautiful interfaces.
 
 With Chameleon, you can easily stop tinkering with RGB values, wasting hours figuring out the right color combinations to use in your app, and worrying about whether your text will be readable on the various background colors of your app. 
 
 ### Features
 
 <p align="center">
-  <img src="http://i.imgur.com/BCSA9Ez.png" alt="Features"/>
+  <img src="http://i.imgur.com/lA4J37o.png" alt="Features"/>
 </p>
+
+### App Showcase ![New](http://i.imgur.com/BX3b9ES.png)
+
+###### In an upcoming update we'll begin showcasing some of the best apps and companies making use of Chameleon. If you'd like to see your app featured in this section, make sure to add it [here](https://airtable.com/shrr1WK6dLQBZfXV0).
 
 ## Table of Contents
 [● Product Features](https://github.com/ViccAlexander/Chameleon#-product-features)  
@@ -42,7 +56,7 @@ With Chameleon, you can easily stop tinkering with RGB values, wasting hours fig
 Chameleon features over 24 hand-picked colors that come in both light and dark shades. 
 
 <p align="center">
-  <img src="http://i.imgur.com/Hs8ICtJ.png" alt="Swatches"/>
+  <img src="http://i.imgur.com/wkGGWkN.png" alt="Swatches"/>
 </p>
 
 ### Flat Color Schemes
@@ -51,13 +65,19 @@ Chameleon equips you with 3 different classes of flat color schemes that can be 
 
 ###### Analogous Flat Color Scheme
 
-![Analogous Scheme](http://i.imgur.com/cPAkSWA.png)
+<p align="center">
+  <img src="http://i.imgur.com/cPAkSWA.png" alt="Analogous Scheme"/>
+</p>
 
 ###### Complementary Flat Color Scheme
-![Complementary Scheme](http://i.imgur.com/kisXJsu.png)
+<p align="center">
+  <img src="http://i.imgur.com/kisXJsu.png" alt="Complementary Scheme"/>
+</p>
 
 ###### Triadic Flat Color Scheme
-![Triadic Scheme](http://i.imgur.com/Cy452jQ.png)
+<p align="center">
+  <img src="http://i.imgur.com/Cy452jQ.png" alt="Triadic Scheme"/>
+</p>
 
 ### Contrasting Text
 With a plethora of color choices available for text, it's difficult to choose one that all users will appreciate and be able to read. Whether you're in doubt of your text and tint color choices, or afraid to let users customize their profile colors because it may disturb the legibility or usability of the app, you no longer have to worry. With Chameleon, you can ensure that all text stands out independent of the background color.
@@ -65,18 +85,18 @@ With a plethora of color choices available for text, it's difficult to choose on
 Oh... Chameleon works with the status bar as well. : )
 
 <p align="center">
-  <img src="http://i.imgur.com/rTz01Qb.gif" alt="Status Bar"/>
+  <img src="http://s29.postimg.org/i1syd7bkn/Contrast.gif" alt="Status Bar"/>
 </p>
 
-### Themes ![Beta](http://i.imgur.com/JyYiUJq.png) ![New](http://i.imgur.com/BX3b9ES.png)
+### Themes ![Beta](http://i.imgur.com/JyYiUJq.png)
 
 Chameleon now allows you easily theme your app with as little as **one line of code**. You can set a theme for all your views, and for specific views as well.
 
 <p align="center">
-  <img src="http://i.imgur.com/NoCCXIy.png" alt="Themes"/>
+  <img src="http://i.imgur.com/ypfqpIn.png" alt="Themes"/>
 </p>
 
-### Colors From Images ![New](http://i.imgur.com/BX3b9ES.png)
+### Colors From Images 
 
 Chameleon allows you to seamlessly extract non-flat or flat color schemes from images without hassle. You can also generate the average color from an image with ease. You can now mold the UI colors of a profile, or product based on an image!
 
@@ -93,7 +113,7 @@ With iOS 7 & 8, Apple mainstreamed flat colors. Now, with the release of iOS 9, 
 
 ![](http://i.imgur.com/2jN72eh.png)
 
-### Xcode Quick Help Documentation ![New](http://i.imgur.com/BX3b9ES.png)
+### Xcode Quick Help Documentation
 
 Chameleon's documentation, while written as clearly and concisely as possible may still render some slightly confused. But don't fret! Staying true to our vision of simplifying the entire color process, we added Xcode Quick Help's Documentation Support! Simply highlight a Chameleon method or tap it with three fingers to find out more about what it is and what it does!
 
@@ -101,14 +121,13 @@ Chameleon's documentation, while written as clearly and concisely as possible ma
   <img src="http://i.imgur.com/p4KkQ9X.png" alt="Xcode Quick Help Documentation"/>
 </p>
   
-### Storyboard Palette ![New](http://i.imgur.com/BX3b9ES.png)
+### Storyboard Palette
 
 If you're like me and love to use storyboard, Chameleon's got you covered. We've provided you with a quick and easy way to access Chameleon colors right from Storyboard, and any other app that uses the color picker (i.e. TextEdit).
 
 <p align="center">
   <img src="http://i.imgur.com/QhhPFHY.gif" alt="Chameleon Palette"/>
 </p>
-
 
 ## ⚠️ Requirements
 
@@ -120,9 +139,9 @@ If you're like me and love to use storyboard, Chameleon's got you covered. We've
 Chameleon is released and distributed under the terms and conditions of the [MIT license](https://github.com/ViccAlexander/Chameleon/blob/master/LICENSE.md).
 
 ## 👥 Contributions
-If you run into problems, please open up an issue. I also actively welcome pull requests. By contributing to Chameleon you agree that your contributions will be licensed under its MIT license.
+If you run into problems, please open up an issue. We also actively welcome pull requests. By contributing to Chameleon you agree that your contributions will be licensed under its MIT license.
 
-If you use Chameleon in your app I would love to hear about it! Drop me a line on [twitter](http://twitter.com/viccsmind).
+If you use Chameleon in your app we would love to hear about it! Drop Vicc a line on [twitter](http://twitter.com/viccsmind).
 
 ## 📗 Documentation
 All methods, properties, and types available in Chameleon are documented below.   
@@ -153,6 +172,16 @@ use_frameworks!
 
 pod 'ChameleonFramework/Swift'
 ```
+
+###### **Note:** Swift support for Chameleon 2.0 is almost complete.
+
+=======
+####Carthage Installation
+Add this to your Cartfile:
+```ruby
+github "ViccAlexander/Chameleon"
+```
+
 =======
 ####Manual Installation
 If you rather install this framework manually, just drag and drop the Chameleon folder into your project, and make sure you check the following boxes. Note: Don't forget to manually import the *QuartzCore* & *CoreGraphics* framework if you plan on using gradient colors!
@@ -163,7 +192,7 @@ If you rather install this framework manually, just drag and drop the Chameleon 
 
 If you're working with Swift and are manually installing Chameleon, there's an additional step. Make sure to download and drag the following file, [ChameleonShorthand.swift](https://github.com/ViccAlexander/Chameleon/blob/master/Pod/Classes/Swift/ChameleonShorthand.swift), into your project, and you'll be good to go.
 
-####Storyboard Add-On ![New](http://i.imgur.com/BX3b9ES.png)
+####Storyboard Add-On
 Using Chameleon's awesome palette in Storyboard is easy! Simply download and install [Chameleon Palette](https://github.com/ViccAlexander/Chameleon/blob/master/Extras/Chameleon.dmg?raw=true).
 
 Once installed, make sure to restart XCode. You'll find all of Chameleon's colors in the Palette Color Picker whenever they're needed! :)
@@ -255,7 +284,7 @@ view.backgroundColor = FlatGreen()
 ```
 
 ####Random Colors
-There are two ways to generate a random flat color. If you have no preference as to whether you want a light shade or a dark shade, you can do the following:
+There are four ways to generate a random flat color. If you have no preference as to whether you want a light shade or a dark shade, you can do the following:
 
 #####Normal Convention:
 ######Objective-C
@@ -304,6 +333,56 @@ RandomFlatColorWithShade(.Light)
 **UIShadeStyles:**  
 - `UIShadeStyleLight` (`UIShadeStyle.Light` in Swift)
 - `UIShadeStyleDark` (`UIShadeStyle.Dark` in Swift)
+
+##### Choosing A Random Color From a List of Colors ![New](http://i.imgur.com/BX3b9ES.png)
+
+If you need to be a bit more selective and only display a random color from a set list of colors, you can use the following method:
+
+#####Normal Convention:
+######Objective-C
+``` objective-c
+[UIColor colorWithRandomColorInArray:@[FlatWhite, FlatRed, FlatBlue]];
+```
+
+######Swift
+``` swift
+TBA
+```
+
+#####Chameleon Shorthand:
+######Objective-C
+``` objective-c
+RandomFlatColorInArray(@[FlatWhite, FlatRed, FlatBlue]) 
+```
+######Swift
+``` swift
+TBA
+```
+
+##### Choosing A Random Flat Color But Excluding A Few ![New](http://i.imgur.com/BX3b9ES.png)
+
+Last but certainly not least, you can also choose form the list of random colors and exclude the ones you don't want. For example say you want to randomly select a flat color for a user's profile, but don't want to use any blacks, grays, or whites. You can simply do:
+
+#####Normal Convention:
+######Objective-C
+``` objective-c
+[UIColor colorWithRandomFlatColorExcludingColorsInArray:@[FlatBlack, FlatBlackDark, FlatGray, FlatGrayDark, FlatWhite, FlatWhiteDark]];
+```
+
+######Swift
+``` swift
+TBA
+```
+
+#####Chameleon Shorthand:
+######Objective-C
+``` objective-c
+RandomFlatColorExcluding(@[FlatBlack, FlatBlackDark, FlatGray, FlatGrayDark, FlatWhite, FlatWhiteDark]) 
+```
+######Swift
+``` swift
+TBA
+```
 
 ####Complementary Colors
 To generate a complementary color, perform the following method call, remembering to specify the color whose complement you want:
@@ -370,7 +449,7 @@ As mentioned previously, this feature is unique to Chameleon. While this feature
 
 ######Swift
 ``` swift
-TBA
+UIColor.pinkColor().flatten()
 ```
 
 #### Gradient Colors
@@ -380,19 +459,19 @@ Using a gradient to color an object usually requires a couple of lines of code p
 Chameleon provides three simple gradient styles. Gradients can be created from any number of colors you desire as long as at least two colors are provided. Don't forget that the contrasting text feature is also compatible with gradient colors!
 
 **UIGradientStyles:**
-* `UIGradientStyleLeftToRight`
-* `UIGradientStyleTopToBottom`
-* `UIGradientStyleRadial`
+* `UIGradientStyleLeftToRight` (UIGradientStyle.LeftToRight in Swift)
+* `UIGradientStyleTopToBottom` (UIGradientStyle.TopToBottom in Swift)
+* `UIGradientStyleRadial` (UIGradientStyle.Radial in Swift)
 
 #####Normal Convention:
 ######Objective-C
 ``` objective-c
-[UIColor colorWithGradientStyle:(UIGradientStyle)gradientStyle withFrame:(CGRect)frame andColors:(NSArray *)colors];
+[UIColor colorWithGradientStyle:(UIGradientStyle)gradientStyle withFrame:(CGRect)frame andColors:(NSArray<UIColor *> *)colors];
 ```
 
 ######Swift
 ``` swift
-UIColor(gradientStyle:UIGradientStyle, withFrame:CGRect, andColors:[AnyObject]!)
+UIColor(gradientStyle:UIGradientStyle, withFrame:CGRect, andColors:[UIColor])
 ```
 
 #####Chameleon Shorthand:
@@ -410,7 +489,7 @@ GradientColor(gradientStyle, frame, colors)
 
 Note: `UIGradientStyleRadial` only uses a maximum of 2 colors at the moment. So if more colors are provided, they will not show.
 
-#### Hex Colors ![New](http://i.imgur.com/BX3b9ES.png)
+#### Hex Colors
 
 One of the most requested features, *hex colors*, is now available. You can simply provide a hex string with or without a *#* sign:
 
@@ -422,7 +501,7 @@ One of the most requested features, *hex colors*, is now available. You can simp
 
 ######Swift
 ``` swift
-TBA
+UIColor(hexString:string)
 ```
 
 #####Chameleon Shorthand:
@@ -433,10 +512,23 @@ HexColor(hexString)
 
 ######Swift
 ``` swift
-TBA
+HexColor(hexString)
+```
+#### Hex Values ![New](http://i.imgur.com/BX3b9ES.png)
+
+Retrieving the `hexValue` of a UIColor is just as easy.
+
+######Objective-C
+``` objective-c
+[FlatGreen hexValue]; //Returns @"2ecc71"
 ```
 
-#### Lighter and Darker Colors ![New](http://i.imgur.com/BX3b9ES.png)
+######Swift
+``` swift
+FlatGreen.hexValue //Returns @"2ecc71"
+```
+
+#### Lighter and Darker Colors
 
 Sometimes all you need is a color a shade lighter or a shade darker. Well for those rare, but crucial moments, Chameleon's got you covered. You can now lighten any color the following way:
 
@@ -448,7 +540,7 @@ Sometimes all you need is a color a shade lighter or a shade darker. Well for th
 
 ######Swift
 ``` swift
-TBA
+color.lightenByPercentage(percentage: CGFloat)
 ```
 
 You can also generate a darker version of a color:
@@ -461,10 +553,10 @@ You can also generate a darker version of a color:
 
 ######Swift
 ``` swift
-TBA
+color.darkenByPercentage(percentage: CGFloat)
 ```
 
-### Colors From Images ![New](http://i.imgur.com/BX3b9ES.png)
+### Colors From Images
 
 Chameleon now supports the extraction of colors from images. You can either generate both flat and non-flat color schemes from an image, or easily extract the average color.
 
@@ -475,9 +567,9 @@ To generate a color scheme simply do the following:
 [NSArray arrayOfColorsFromImage:(UIImage *)image withFlatScheme:(BOOL)flatScheme];
 ```
 
-######Swift
+######Swift (**Array extension missing**)
 ``` swift
-TBA
+NSArray(ofColorsFromImage: UIImage, withFlatScheme: Bool)
 ```
 
 #####Chameleon Shorthand:
@@ -488,7 +580,7 @@ ColorsFromImage(image, isFlatScheme)
 
 ######Swift
 ``` swift
-TBA
+ColorsFromImage(image, isFlatScheme)
 ```
 
 To extract the average color from an image, you can also do:
@@ -500,7 +592,7 @@ To extract the average color from an image, you can also do:
 
 ######Swift
 ``` swift
-TBA
+UIColor(averageColorFromImage: UIImage)
 ```
 
 #####Chameleon Shorthand:
@@ -511,11 +603,11 @@ AverageColorFromImage(image)
 
 ######Swift
 ``` swift
-TBA
+AverageColorFromImage(image)
 ```
 
 ###UIStatusBarStyle Methods
-####Contrasting UIStatusBarStyle ![New](http://i.imgur.com/BX3b9ES.png)
+####Contrasting UIStatusBarStyle
 Many apps on the market, even the most popular ones, overlook this aspect of a beautiful app: the status bar style. Chameleon has done something no other framework has... it has created a new status bar style: `UIStatusBarStyleContrast`. Whether you have a `ViewController` embedded in a `NavigationController`, or not, you can do the following:
 
 #####Normal Convention:
@@ -526,7 +618,7 @@ Many apps on the market, even the most popular ones, overlook this aspect of a b
 
 ######Swift
 ``` swift
-TBA
+self.setStatusBarStyle(UIStatusBarStyleContrast)
 ```
 ######**Note**: Make sure that the key *View controller-based status bar appearance* in **Info.plist** is set to `YES`.
 
@@ -610,7 +702,7 @@ UIColor *firstColor = colorArray[0];
 var firstColor = colorArray[0] as! UIColor
 ```  
 
-###Theme Methods ![New](http://i.imgur.com/BX3b9ES.png)
+###Theme Methods
 
 With Chameleon, you can now specify a global color theme with simply one line of code (It even takes care of dealing with the status bar style as well)! Here's one of three methods to get you started. `ContentStyle` allows you to decide whether text and a few other elements should be white, black, or whichever contrasts more over any UI element's `backgroundColor`. 
 
@@ -633,14 +725,29 @@ But what if you want a different theme for a specific `UIViewController?` No pro
 
 ###### **Note:** In order for the status bar style to automatically be set using a theme, you need to make sure that the *View controller-based status bar appearance* key in **Info.plist** is set to `NO`.
 
+#### Navigation Bar Hairline
+
+![No Hairline](http://i.imgur.com/tjwx53y.png)
+
+As of `2.0.3` the navigation bar hairline view is no longer hidden by default. However, if you're seeking a true flat look (like the image above), you can hide the hairline at the bottom of the navigation bar by doing the following: 
+
+######Objective-C
+```objective-c
+[self.navigationController setHidesNavigationBarHairline:YES];
+
+//or
+
+self.navigationController.hidesNavigationBarHairline = YES;
+```
+
 ## 👑 Author
-Chameleon was developed by **Vicc Alexander** [(@ViccsMind)](https://twitter.com/viccsmind).
+Chameleon was developed by **Vicc Alexander** [(@ViccsMind)](https://twitter.com/viccsmind) in 2014. Currently, it is being maintained by [@ViccAlexander](https://github.com/ViccAlexander) and [@Bre7](https://github.com/bre7).
 
-Using Chameleon in your App? [Let me know](https://twitter.com/viccsmind). 🌈📲  
+##### Support ☕️
+If you enjoy Chameleon and would like to buy us a coffee we'd appreciate it. <a href="https://gratipay.com/chameleon/"><img src="https://img.shields.io/badge/Donate-%241%2Fweek-yellow.svg?style=social" alt="Donate"/></a>
 
-## 📝 To Do List
-*No particular order.*  
-• ~~Cocoapods Support~~ ![1.0.1](http://i.imgur.com/8Li5aRR.png)  
+## 📝 To Do List 
+* ~~Cocoapods Support~~ ![1.0.1](http://i.imgur.com/8Li5aRR.png)  
 * ~~Table of Contents~~ ![1.0.1](http://i.imgur.com/8Li5aRR.png)  
 * ~~Storyboard Color Picker Add-On~~ ![1.1.0](http://i.imgur.com/Py4QvaK.png)  
 * ~~Xcode In-App Documentation~~ ![1.1.0](http://i.imgur.com/Py4QvaK.png)  
@@ -652,154 +759,10 @@ Using Chameleon in your App? [Let me know](https://twitter.com/viccsmind). 🌈�
 * ~~Swift Support~~ ![1.1.3](http://i.imgur.com/WgpBlLo.png)     
 * ~~Color Scheme From Images~~ ![2.0.0](http://i.imgur.com/HdE8kjQ.png)  
 * ~~UIAppearance Convenience Methods~~  ![2.0.0](http://i.imgur.com/HdE8kjQ.png)  
+* ~~Add option to hide `NavigationBar` hairline~~ ![2.0.3](http://i.imgur.com/DmlOKPJ.png)
+* Allow Gradient Colors to Adapt To Frame Changes
 
 ## 📄 Change Log
 
-### 2.0.0
-
-###### Added Methods  
-
-**Chameleon.h**
- 
-* `+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor withContentStyle:(UIContentStyle)contentStyle;`
-* `+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor withSecondaryColor:(UIColor *)secondaryColor andContentStyle:(UIContentStyle)contentStyle;`
-* `+ (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor  withSecondaryColor:(UIColor *)secondaryColor usingFontName:(NSString *)fontName andContentStyle:(UIContentStyle)contentStyle;`
-
-**NSArray+Chameleon.h**
-
-* `+ (NSArray *)arrayOfColorsFromImage:(UIImage *)image withFlatScheme (BOOL)isFlatScheme;`
-
-**UIColor+Chameleon.h**
-
-* `+ (UIColor *)colorWithAverageColorFromImage:(UIImage *)image;`
-* `+ (UIColor *)colorWithAverageColorFromImage:(UIImage *)image withAlpha:(CGFloat)alpha;`
-* `+ (UIColor *)colorWithRandomFlatColorOfShadeStyle:(UIShadeStyle)shadeStyle withAlpha:(CGFloat)alpha;`
-* `+ (UIColor *)colorWithComplementaryFlatColorOf:(UIColor *)color withAlpha:(CGFloat)alpha;`
-* `+ (UIColor *)colorWithContrastingBlackOrWhiteColorOn:(UIColor *)backgroundColor isFlat:(BOOL)flat alpha:(CGFloat)alpha;`
-* `+ (UIColor *)colorWithFlatVersionOf:(UIColor *)color withAlpha:(CGFloat)alpha;`
-* `+ (UIColor *)colorWithHexString:(NSString *)string;`
-* `+ (UIColor *)colorWithHexString:(NSString *)string withAlpha:(CGFloat)alpha;`
-* `- (UIColor *)flatten;`
-* `- (UIColor *)darkenByPercentage:(CGFloat)percentage;`
-* `- (UIColor *)lightenByPercentage:(CGFloat)percentage;`
-
-**UINavigationController+Chameleon.h**
-
-* `- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;`
-* `- (void)setThemeUsingPrimaryColor:(UIColor *)primaryColor withContentStyle:(UIContentStyle)contentStyle;`
-* `- (void)setThemeUsingPrimaryColor:(UIColor *)primaryColor withSecondaryColor:(UIColor *)secondaryColor andContentStyle:(UIContentStyle)contentStyle;`
-* `setThemeUsingPrimaryColor:(UIColor *)primaryColor withSecondaryColor:(UIColor *)secondaryColor usingFontName:(NSString *)fontName andContentStyle:(UIContentStyle)contentStyle;`
-* `- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;`
-
-                        
-###### Deprecated Methods
-
-**NSArray+Chameleon.h**
-
-* ~~`+ (NSArray *)arrayOfColorsWithColorScheme:(ColorScheme)colorScheme with:(UIColor *)color flatScheme:(BOOL)isFlatScheme `~~  
-
-> Replaced with: `+ (NSArray *)arrayOfColorsWithColorScheme:(ColorScheme)colorScheme usingColor:(UIColor *)color withFlatScheme:(BOOL)isFlatScheme;`
-
-**UIViewController+Chameleon.h**
-
-* ~~`- (void)flatify;`~~
-* ~~`- (void)flatifyAndContrast;`~~
-
-###### Added Macros
-* `AverageColorFromImage(image)`
-* `AverageColorFromImageWithAlpha(image, alpha)`
-* `RandomFlatColorWithShadeAndAlpha(shade, alpha)`
-* `ColorsWithScheme(colorSchemeType, color, isFlatScheme)`   
-* `ComplementaryFlatColorWithAlpha(color, alpha)`
-* `ContrastColorWithAlpha(backgroundColor, returnFlat, alpha)`
-* `HexColor(hexString)`
-* `HexColorWithAlpha(hexString, alpha)`
-* `RandomFlatColorWithShadeAndAlpha(shade, alpha)`
-* `ColorsFromImage(image, isFlatScheme)`  
-
-######Deprecated
-* `ColorsWithScheme(colorSchemeType, color, isFlatScheme)`
-
-> Replaced with: `ColorsWithScheme(colorSchemeType, color, isFlatScheme)`
-
-### 1.2.1
-• Added cocoapods support for Swift 2 *(Thanks to [**@bre7**](https://github.com/bre7))*. 
-
-### 1.2.0
-• Fixed cocoapods installation error [#30](https://github.com/ViccAlexander/Chameleon/issues/30).  
-• Updated Swift syntax to Swift 1.2 *(Fixed by [**@peacemoon**](https://github.com/peacemoon))*.    
-• Split Objective-C & Swift Files into separate folders to keep files better organized.  
-• Renamed `Constants.swift` to `ChameleonShorthand.swift`  
-
-###### Deprecated Methods
-
-* ~~`FlatVersionOfColor(color)`~~  
-* ~~`ColorScheme(colorSchemeType: ColorScheme, color: UIColor, isFlatScheme: Bool)`~~   
-
-Replaced with: `ColorSchemeOf(colorSchemeType: ColorScheme, color: UIColor, isFlatScheme: Bool)` due to naming constraints. 
-
-### 1.1.3
-• Chameleon shorthand is now supported in Swift. *(Thanks to [**@bre7**](https://github.com/bre7))*.  
-• Fixed Small Syntax Typo. *(Fixed by [**@ddwang**](https://github.com/ddwang))*.  
-• Fixed issue where `-colorWithRandomFlatColorOfShadeStyle` always returns random color of `UIShadeStyleLight` *(Fixed by [**@smokyonion**](https://github.com/smokyonion))*.    
-• UIGraphics context now uses the current screen's scale, preventing pixel wrap around for certain `UIColors` generated by `+ (UIColor *)colorWithGradientStyle` methods *(Fixed by [**@alist**](https://github.com/alist))*.  
-• Removed warnings regarding the absolute value function `fabsf` *(Fixed by [**@jherran**](https://github.com/jherran))*.  
-• Fixed the *`UIColor+Chameleon.m:444:13: code will never be executed*`, error state *(Fixed by [**@jherran**](https://github.com/jherran))*.  
-
-
-### 1.1.2
-• Updated Copyright in all files and launch images  
-• Added Launch Image in example project for iPhone 6 & iPhone 6 Plus  
-• Replaced the reserved word `for` with the word `with` in `arrayOfColorsWithColorScheme` *(Fixed by [**@sfader**](https://github.com/sfader))*.
-
-###### Deprecated Methods
- * ~~`initWithArray:for:flatScheme:`~~
-
-Replaced with: `initWithArray:with:flatScheme:`  
-
-### 1.1.1
-* ```ShadeStyle``` is now ```UIShadeStyle```
-* ```GradientStyle``` is now ```UIGradientStyle```
-* ```light``` is now ```UIShadeStyleLight```
-* ```dark``` is now ```UIShadeStyleDark```
-* ```linearGradientLeftToRight``` is now ```UIGradientStyleLeftToRight```
-* ```linearGradientTopToBottom``` is now ```UIGradientStyleTopToBottom```
-* Added: ```UIGradientStyleRadial```
-
-### 1.1.0
-* Added Gradient Colors
-* Added Storyboard Palette Add-on
-* Added Xcode Quick Help Documentation Support
-* Switched from RGB colorspace to HSB & LAB colorspaces (closer to human perception)
-* Implemented `ContrastingColor` which supports all alphas and has additional support for non-flat and flat colors
-* Changed Color difference algorithm so that it now uses CIE:2000 formula
-* Changed `RandomFlatColors` from enum to nsarray values
-* Edited `RandomFlatColor` so that it will no longer spit out the same color back to back
-* Switched complementary and triadic fourth and fifth colors order.
-* New Macro: `ClearColor`
-
-###### Deprecated Methods
-* ~~`colorWithContrastingBlackOrWhiteColorOn:`~~
-
-Replaced with: `colorWithContrastingBlackOrWhiteColorOn:isFlat:`  
-
-###### Deprecated Macros
-* ~~`ContrastingColorOf(backgroundColor)`~~  
-
-Replaced with: `ContrastingColorOf(backgroundColor, isFlat)`
-
-* ~~`ComplementaryColorOf(color)`~~
-
-Replaced with: `ComplementaryFlatColorOf(color)`
-
-* ~~`RandomColorWithShade(shade)`~~
-
-Replaced with: `RandomFlatColorWithShade(shade)`
-
-### 1.0.1
-* Added Table of Contents
-* Fixed a couple of spelling errors
-* Extra '#define' deleted *(Fixed by [**@cascio**](https://github.com/cascio))*.  
-* Imported UIKit in ChameleonStatusBar.h and NSArray+Chameleon.h *(Fixed by [**@jmhooper**](https://github.com/jmhooper))*.
-
+### See [Changelog.md](https://github.com/ViccAlexander/Chameleon/blob/master/CHANGELOG.md) 👀
 

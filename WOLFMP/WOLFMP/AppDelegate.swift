@@ -42,20 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = rootVC
         
         
-        
-        
-        let deviceToken = NSUserDefaults.standardUserDefaults().objectForKey("kDeviceToken") as? String
-        RCIM.sharedRCIM().initWithAppKey("pwe86ga5el156")
-        RCIM.sharedRCIM().connectWithToken("oCFjtvES78B1y5+cjPfAbCnnPjd2QStGE2mvZH+ncIOGoL5Y1Nu4Zge5uMTKS79p9SaalGiru/dZgi+EzL497w==", success: { (successStr) -> Void in
-            print("融云连接成功")
-            print(successStr)
-        }, error: { (errorCode) -> Void in
-            print("融云连接不成功，\(errorCode)")
-        }) { (_) -> Void in
-            print("融云token不正确")
-        }
-        
-        
     
         
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613E664FB7FCC2B0ED5B1369 /* Pods_WOLFMPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA871EBFB49DABE62097DF36 /* Pods_WOLFMPTests.framework */; };
 		770573591B68AE0B005F3252 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770573581B68AE0B005F3252 /* HRToast+UIView.swift */; };
 		7705735B1B68B3AF005F3252 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705735A1B68B3AF005F3252 /* SignInViewController.swift */; };
 		77C4629D1B6A16E400117364 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4629C1B6A16E400117364 /* ConversationListViewController.swift */; };
@@ -22,7 +23,7 @@
 		79F33F5D1AEBF37C00D53C72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F33F5C1AEBF37C00D53C72 /* Images.xcassets */; };
 		79F33F601AEBF37C00D53C72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F33F5E1AEBF37C00D53C72 /* LaunchScreen.xib */; };
 		79F33F6C1AEBF37D00D53C72 /* WOLFMPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F33F6B1AEBF37D00D53C72 /* WOLFMPTests.swift */; };
-		9ED2DD803F4D040367F9F52F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01044EBD8C6140A6F19A2F4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FD367510E1716E3BF2F90FA3 /* Pods_WOLFMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C09CE1477EA7E54B084BE2B /* Pods_WOLFMP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C09CE1477EA7E54B084BE2B /* Pods_WOLFMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOLFMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		74D6F07C636745F35B40ACC0 /* Pods-WOLFMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOLFMP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WOLFMP/Pods-WOLFMP.release.xcconfig"; sourceTree = "<group>"; };
 		770573581B68AE0B005F3252 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HRToast+UIView.swift"; path = "Lib/Toast/HRToast+UIView.swift"; sourceTree = "<group>"; };
 		7705735A1B68B3AF005F3252 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = VC/Login/SignInViewController.swift; sourceTree = "<group>"; };
 		77C4629C1B6A16E400117364 /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationListViewController.swift; path = VC/Chat/ConversationListViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +62,11 @@
 		79F33F6A1AEBF37D00D53C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F33F6B1AEBF37D00D53C72 /* WOLFMPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOLFMPTests.swift; sourceTree = "<group>"; };
 		A01044EBD8C6140A6F19A2F4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9D22D675567D30CF22F7BC /* Pods-WOLFMP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOLFMP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WOLFMP/Pods-WOLFMP.debug.xcconfig"; sourceTree = "<group>"; };
+		BA871EBFB49DABE62097DF36 /* Pods_WOLFMPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOLFMPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD5B8412F4BFF868ED7106B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E67A237233D4C6A1B4034971 /* Pods-WOLFMPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOLFMPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WOLFMPTests/Pods-WOLFMPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F654178ECB65F619AD6B4128 /* Pods-WOLFMPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOLFMPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WOLFMPTests/Pods-WOLFMPTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ED2DD803F4D040367F9F52F /* Pods.framework in Frameworks */,
+				FD367510E1716E3BF2F90FA3 /* Pods_WOLFMP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613E664FB7FCC2B0ED5B1369 /* Pods_WOLFMPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				A01044EBD8C6140A6F19A2F4 /* Pods.framework */,
+				1C09CE1477EA7E54B084BE2B /* Pods_WOLFMP.framework */,
+				BA871EBFB49DABE62097DF36 /* Pods_WOLFMPTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,6 +247,10 @@
 			children = (
 				DAD5B8412F4BFF868ED7106B /* Pods.debug.xcconfig */,
 				3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */,
+				AC9D22D675567D30CF22F7BC /* Pods-WOLFMP.debug.xcconfig */,
+				74D6F07C636745F35B40ACC0 /* Pods-WOLFMP.release.xcconfig */,
+				E67A237233D4C6A1B4034971 /* Pods-WOLFMPTests.debug.xcconfig */,
+				F654178ECB65F619AD6B4128 /* Pods-WOLFMPTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -268,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79F33F721AEBF37D00D53C72 /* Build configuration list for PBXNativeTarget "WOLFMPTests" */;
 			buildPhases = (
+				8690F0E64BD4493747ED917C /* Check Pods Manifest.lock */,
 				79F33F611AEBF37D00D53C72 /* Sources */,
 				79F33F621AEBF37D00D53C72 /* Frameworks */,
 				79F33F631AEBF37D00D53C72 /* Resources */,
+				08DE373C9DF3CD012ED1C0D7 /* Embed Pods Frameworks */,
+				8E6793931EEE253C2FA1729A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +359,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08DE373C9DF3CD012ED1C0D7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WOLFMPTests/Pods-WOLFMPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F3B88016B28F8645826BA4D /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,7 +386,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WOLFMP/Pods-WOLFMP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8690F0E64BD4493747ED917C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E6793931EEE253C2FA1729A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WOLFMPTests/Pods-WOLFMPTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DACD84EA1E7E997AA760BC59 /* Check Pods Manifest.lock */ = {
@@ -384,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WOLFMP/Pods-WOLFMP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -531,7 +593,7 @@
 		};
 		79F33F701AEBF37D00D53C72 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAD5B8412F4BFF868ED7106B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = AC9D22D675567D30CF22F7BC /* Pods-WOLFMP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -547,7 +609,7 @@
 		};
 		79F33F711AEBF37D00D53C72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D513F19E0A1DFAAB72630AB /* Pods.release.xcconfig */;
+			baseConfigurationReference = 74D6F07C636745F35B40ACC0 /* Pods-WOLFMP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -562,6 +624,7 @@
 		};
 		79F33F731AEBF37D00D53C72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67A237233D4C6A1B4034971 /* Pods-WOLFMPTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -581,6 +644,7 @@
 		};
 		79F33F741AEBF37D00D53C72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F654178ECB65F619AD6B4128 /* Pods-WOLFMPTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -42,14 +42,16 @@ install_framework()
   # Resign the code if required by the build settings to avoid unstable apps
   code_sign_if_enabled "${destination}/$(basename "$1")"
 
-  # Embed linked Swift runtime libraries
-  local swift_runtime_libs
-  swift_runtime_libs=$(xcrun otool -LX "$binary" | grep --color=never @rpath/libswift | sed -E s/@rpath\\/\(.+dylib\).*/\\1/g | uniq -u  && exit ${PIPESTATUS[0]})
-  for lib in $swift_runtime_libs; do
-    echo "rsync -auv \"${SWIFT_STDLIB_PATH}/${lib}\" \"${destination}\""
-    rsync -auv "${SWIFT_STDLIB_PATH}/${lib}" "${destination}"
-    code_sign_if_enabled "${destination}/${lib}"
-  done
+  # Embed linked Swift runtime libraries. No longer necessary as of Xcode 7.
+  if [ "${XCODE_VERSION_MAJOR}" -lt 7 ]; then
+    local swift_runtime_libs
+    swift_runtime_libs=$(xcrun otool -LX "$binary" | grep --color=never @rpath/libswift | sed -E s/@rpath\\/\(.+dylib\).*/\\1/g | uniq -u  && exit ${PIPESTATUS[0]})
+    for lib in $swift_runtime_libs; do
+      echo "rsync -auv \"${SWIFT_STDLIB_PATH}/${lib}\" \"${destination}\""
+      rsync -auv "${SWIFT_STDLIB_PATH}/${lib}" "${destination}"
+      code_sign_if_enabled "${destination}/${lib}"
+    done
+  fi
 }
 
 # Signs a framework with the provided identity
@@ -82,28 +84,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-WOLFMP/Alamofire.framework"
-  install_framework "Pods-WOLFMP/ChameleonFramework.framework"
-  install_framework "Pods-WOLFMP/MGSwipeTableCell.framework"
-  install_framework "Pods-WOLFMP/PDTSimpleCalendar.framework"
-  install_framework "Pods-WOLFMP/QRCodeReader.framework"
-  install_framework "Pods-WOLFMP/Spring.framework"
-  install_framework "Pods-WOLFMP/SwiftOverlays.framework"
-  install_framework "Pods-WOLFMP/SwiftyJSON.framework"
-  install_framework "Pods-WOLFMP/TextFieldEffects.framework"
-  install_framework "Pods-WOLFMP/ToastSwift.framework"
-  install_framework "Pods-WOLFMP/ios_charts.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Charts/Charts.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/PDTSimpleCalendar/PDTSimpleCalendar.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/QRCodeReader.swift/QRCodeReader.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Spring/Spring.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SwiftOverlays/SwiftOverlays.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/TextFieldEffects/TextFieldEffects.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-WOLFMP/Alamofire.framework"
-  install_framework "Pods-WOLFMP/ChameleonFramework.framework"
-  install_framework "Pods-WOLFMP/MGSwipeTableCell.framework"
-  install_framework "Pods-WOLFMP/PDTSimpleCalendar.framework"
-  install_framework "Pods-WOLFMP/QRCodeReader.framework"
-  install_framework "Pods-WOLFMP/Spring.framework"
-  install_framework "Pods-WOLFMP/SwiftOverlays.framework"
-  install_framework "Pods-WOLFMP/SwiftyJSON.framework"
-  install_framework "Pods-WOLFMP/TextFieldEffects.framework"
-  install_framework "Pods-WOLFMP/ToastSwift.framework"
-  install_framework "Pods-WOLFMP/ios_charts.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Charts/Charts.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/PDTSimpleCalendar/PDTSimpleCalendar.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/QRCodeReader.swift/QRCodeReader.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Spring/Spring.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SwiftOverlays/SwiftOverlays.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/TextFieldEffects/TextFieldEffects.framework"
 fi

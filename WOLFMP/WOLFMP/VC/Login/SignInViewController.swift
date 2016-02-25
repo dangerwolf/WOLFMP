@@ -57,6 +57,9 @@ class SignInViewController: UIViewController {
         }
 
     }
+    @IBAction func backBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("backToLoginSegue", sender: nil)
+    }
     @IBAction func registerAction(sender: AnyObject) {
         
         userCodeTF.resignFirstResponder()
